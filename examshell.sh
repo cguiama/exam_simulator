@@ -7,6 +7,7 @@ TRACES_DIR="./traces"
 
 GREEN='\033[0;32m'
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
 NC='\033[0m'
 
 mkdir -p "$RENDU_DIR"
@@ -51,12 +52,13 @@ for LEVEL in 00 01 02 03 04 05; do
             echo -e "\n---------------------------------------------------"
             echo -e ">>> Crie seu arquivo C dentro de: ${RED}$RENDU_DIR/$EX_NAME/${NC}"
 
-            read -p ">>> Digite 'grademe' para avaliar ou 'q' para sair: " RAW_CMD
+            echo -ne ">>> Digite '${YELLOW}grademe${NC}' para avaliar ou '${YELLOW}finish${NC}' para sair: "
+            read RAW_CMD
 
-            # Conversão para letras minúsculas para aceitar 'Q' ou 'Grademe'
+            # Conversão para letras minúsculas para aceitar 'Finish' ou 'Grademe'
             CMD=$(echo "$RAW_CMD" | tr '[:upper:]' '[:lower:]')
 
-            if [ "$CMD" == "q" ]; then
+            if [ "$CMD" == "finish" ]; then
                 echo "Encerrando a sessão do examshell."
                 exit 0
             elif [ "$CMD" == "grademe" ]; then
