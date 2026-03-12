@@ -86,4 +86,4 @@ Crie a estrutura: `tests/nome_do_exercicio/`. Dentro dela, você **precisa** de 
 ## 🔍 Depuração e Traces
 
 Se o seu código compilar perfeitamente, mas a lógica falhar, o motor gerará um arquivo na pasta `./traces/nome_do_exercicio.trace` usando o formato *Unified Diff*.
-Ele mapeia a memória e exibe no terminal: o sinal `-` indica o gabarito esperado, e o `+` indica a divergência que o seu código imprimiu.
+Ele mapeia a memória e exibe no terminal: o sinal `-` indica o gabarito esperado, e o `+` indica a divergência que o seu código imprimiu..
