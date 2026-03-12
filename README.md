@@ -29,20 +29,20 @@ examshell/
 │
 ├── subject/          # (Você deve criar) Contém os textos dos enunciados
 │   └── Level00/
-│       └── aff_a/
+│       └── bluff/
 │           └── subject.txt
 │
 ├── tests/            # (Você deve criar) Contém os gabaritos e injetores
-│   └── aff_a/
+│   └── bluff/
 │       ├── expected.txt
 │       └── run_test.sh (ou main.c)
 │
 ├── rendu/            # (Gerada automaticamente) Sua mesa de trabalho
-│   └── aff_a/
-│       └── aff_a.c
+│   └── bluff/
+│       └── bluff.c
 │
 └── traces/           # (Gerada automaticamente) Logs gerados em caso de falha lógica
-    └── aff_a.trace
+    └── bluff.trace
 ```
 
 ## 🚀 Instalação e Configuração
