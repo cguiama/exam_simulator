@@ -1,0 +1,19 @@
+Assignment name  : last_veggie
+Expected files   : last_veggie.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa chamado last_veggie que receba strings como argumentos
+(representando uma lista de legumes), e exiba o último legume da lista seguido de uma nova linha (\n).
+
+Se não houver nenhum legume na lista (ou seja, se o número de argumentos for menor que 1), o programa exibe apenas uma nova linha.
+
+Exemplos:
+
+$> ./last_veggie "carrot" "potato" "broccoli" | cat -e
+broccoli$
+$> ./last_veggie "sweet potato" | cat -e
+sweet potato$
+$> ./last_veggie | cat -e
+$
+$>

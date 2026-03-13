@@ -1,0 +1,19 @@
+Assignment name  : ulstr_pet
+Expected files   : ulstr_pet.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que receba uma string e inverta o 'case' (maiúsculas/minúsculas)
+de todas as suas letras.
+Outros caracteres permanecem inalterados.
+O resultado deve ser seguido de uma nova linha (\n).
+
+Se o número de argumentos não for 1, o programa exibe apenas uma nova linha.
+
+Exemplos:
+$> ./ulstr_pet "L'ePonge Bob" | cat -e
+l'EpONGE bOB$
+$> ./ulstr_pet "3 cachorros e 1 GATO" | cat -e
+3 CACHORROS E 1 gato$
+$> ./ulstr_pet | cat -e
+$

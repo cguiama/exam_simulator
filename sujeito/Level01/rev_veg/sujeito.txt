@@ -1,0 +1,12 @@
+Assignment name  : rev_veg
+Expected files   : rev_veg.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva uma função que receba uma string (uma fileira de vegetais) e a
+ exiba de trás para frente, seguida de uma nova linha (\n).
+
+A função deve retornar o ponteiro original recebido como parâmetro.
+
+Sua função deve ser declarada da seguinte forma:
+char *rev_veg(char *str);

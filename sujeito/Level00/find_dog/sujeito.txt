@@ -1,0 +1,24 @@
+Assignment name  : find_dog
+Expected files   : find_dog.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa chamado find_dog que receba uma string (representando um parque de animais)
+e exiba o primeiro caractere 'd' (de dog) que encontrar nela, seguido de uma nova linha (\n).
+
+Se não houver nenhum caractere 'd' na string, o programa apenas escreve 'd' seguido de uma nova linha.
+
+Se o número de parâmetros passados para o programa não for exatamente 1,
+o programa exibe apenas 'd' seguido de uma nova linha.
+
+Exemplos:
+
+$> ./find_dog "cat, bird, dog" | cat -e
+d$
+$> ./find_dog "cat, bird, fish" | cat -e
+d$
+$> ./find_dog | cat -e
+d$
+$> ./find_dog "dog" "cat" | cat -e
+d$
+$>

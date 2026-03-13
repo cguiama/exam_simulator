@@ -1,0 +1,9 @@
+Assignment name  : swap_veg
+Expected files   : swap_veg.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Escreva uma função que troque o conteúdo de dois inteiros cujos endereços são passados como parâmetros.
+
+Sua função deve ser declarada da seguinte forma:
+void swap_veg(int *a, int *b);

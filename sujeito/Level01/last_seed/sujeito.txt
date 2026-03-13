@@ -1,0 +1,16 @@
+Assignment name  : last_seed
+Expected files   : last_seed.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que exiba o seu último argumento (última semente) na
+saída padrão, seguido de uma nova linha (\n).
+Se não houver argumentos, o programa exibe apenas uma nova linha.
+
+Exemplos:
+$> ./last_seed "abobora" "feijao" "milho" | cat -e
+milho$
+$> ./last_seed "uma unica semente gigante" | cat -e
+uma unica semente gigante$
+$> ./last_seed | cat -e
+$

@@ -1,0 +1,21 @@
+Assignment name  : first_veggie
+Expected files   : first_veggie.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa chamado first_veggie que receba strings como argumentos
+(representando uma cesta de legumes), e exiba o primeiro legume da cesta
+seguido de uma nova linha (\n).
+
+Se não houver nenhum legume na cesta (ou seja, se o número de parâmetros passados for 0)
+, o programa exibe apenas uma nova linha.
+
+Exemplos:
+
+$> ./first_veggie "tomato" "onion" "garlic" | cat -e
+tomato$
+$> ./first_veggie "green bell pepper" | cat -e
+green bell pepper$
+$> ./first_veggie | cat -e
+$
+$>

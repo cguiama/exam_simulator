@@ -1,14 +1,18 @@
 #!/bin/bash
 
-RENDU_DIR="./rendu"
-TESTS_DIR="./tests"
-TRACES_DIR="./traces"
+RENDU_DIR="./ryu"
+TESTS_DIR="./testes"
+TRACES_DIR="./trechos"
 CC="gcc"
 CFLAGS="-Wall -Wextra -Werror"
 TARGET_EX=$1
 
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+
 echo "========================================="
-echo "        INICIANDO AUTOGRADER             "
+echo "        INICIANDO AVALIADOR              "
 echo "========================================="
 
 if [ -z "$TARGET_EX" ]; then
@@ -18,16 +22,18 @@ fi
 
 EX_PATH="$RENDU_DIR/$TARGET_EX"
 TEST_DIR_PATH=$(find "$TESTS_DIR" -type d -name "$TARGET_EX" | head -n 1)
+
 if [ -z "$TEST_DIR_PATH" ]; then
     echo -e "\n[ERRO] Pasta de testes para $TARGET_EX não encontrada."
     exit 1
 fi
+
 EXPECTED_OUT="$TEST_DIR_PATH/expected.txt"
 BIN_PATH="/tmp/${TARGET_EX}_bin"
 USER_OUT="/tmp/${TARGET_EX}_out.txt"
 
 if [ ! -d "$EX_PATH" ]; then
-    echo -e "\n[FALHOU] Diretório não encontrado. Você criou a pasta rendu/$TARGET_EX ?"
+    echo -e "\n[FALHOU] Diretório não encontrado. Você criou a pasta $RENDU_DIR/$TARGET_EX ?"
     exit 1
 fi
 
@@ -79,21 +85,17 @@ fi
 # Análise de Diferenças
 diff -q "$USER_OUT" "$EXPECTED_OUT" > /dev/null
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}[PASSOU] Sucesso absoluto. Comportamento de memória validado.${NC}"
+    echo -e "${GREEN}[PASSOU] Sucesso absoluto. Comportamento validado.${NC}"
     rm -f "$BIN_PATH" "$USER_OUT"
     exit 0
 else
     echo -e "\n${RED}[FALHOU] A saída lógica do seu programa está incorreta.${NC}"
 
-    # Gera o arquivo de rastro (trace) usando Unified Diff
     TRACE_FILE="$TRACES_DIR/${TARGET_EX}.trace"
     diff -u "$EXPECTED_OUT" "$USER_OUT" > "$TRACE_FILE"
 
     echo -e ">>> Rastro da diferença gerado. O que tem '-' era o esperado, o que tem '+' foi o que você fez:\n"
-
-    # Exibe o trace no stdout para feedback imediato
     cat "$TRACE_FILE"
-
     echo -e "\n>>> Trace salvo em: ${RED}$TRACE_FILE${NC}"
 
     rm -f "$BIN_PATH" "$USER_OUT"

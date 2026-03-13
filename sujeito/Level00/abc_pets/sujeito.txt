@@ -1,0 +1,11 @@
+Assignment name  : abc_pets
+Expected files   : abc_pets.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Os animais estão aprendendo a ler.
+Escreva uma função que exiba o alfabeto em letras minúsculas,
+em uma única linha, em ordem crescente.
+
+Sua função deve ser declarada da seguinte forma:
+void abc_pets(void);

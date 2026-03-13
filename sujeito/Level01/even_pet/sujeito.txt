@@ -1,0 +1,10 @@
+Assignment name  : even_pet
+Expected files   : even_pet.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva uma função que determine se um número inteiro é par.
+A função deve retornar 1 se o número for par, e 0 se for ímpar.
+
+Sua função deve ser declarada da seguinte forma:
+int even_pet(int n);

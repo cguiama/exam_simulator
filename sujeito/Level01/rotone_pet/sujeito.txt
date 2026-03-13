@@ -1,0 +1,23 @@
+Assignment name  : rotone_pet
+Expected files   : rotone_pet.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que receba uma string e a exiba,
+substituindo cada caractere alfabético
+pelo próximo caractere na ordem alfabética.
+
+'a' vira 'b', 'z' vira 'a'.
+'A' vira 'B', 'Z' vira 'A'.
+
+Caracteres que não são letras permanecem inalterados.
+O programa deve sempre exibir uma nova linha (\n) ao final.
+Se o número de argumentos não for 1, apenas exiba uma nova linha.
+
+Exemplos:
+$> ./rotone_pet "Gato, Cachorro!" | cat -e
+Hbup, Dbdipssr!$
+$> ./rotone_pet "zZ" | cat -e
+aA$
+$> ./rotone_pet | cat -e
+$

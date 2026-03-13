@@ -1,0 +1,12 @@
+Assignment name  : only_zucchini
+Expected files   : only_zucchini.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa chamado only_zucchini que exiba o caractere 'z'
+(de zucchini), seguido de uma nova linha (\n).
+
+Exemplo:
+$> ./only_zucchini | cat -e
+z$
+$>

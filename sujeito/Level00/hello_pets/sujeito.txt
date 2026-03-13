@@ -1,0 +1,12 @@
+Assignment name  : hello_pets
+Expected files   : hello_pets.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa chamado hello_pets que exiba "Hello Pets!"
+seguido de uma nova linha (\n).
+
+Exemplo:
+$> ./hello_pets | cat -e
+Hello Pets!$
+$>

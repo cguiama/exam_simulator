@@ -1,0 +1,16 @@
+Assignment name  : pet_countdown
+Expected files   : pet_countdown
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+A hora da ração está chegando! Escreva um programa chamado pet_countdown que
+ exiba uma contagem regressiva para os pets.
+
+O programa deve exibir todos os dígitos em ordem decrescente,
+começando do '9' até o '0', seguidos de uma nova linha (\n).
+
+Exemplo:
+
+$> ./pet_countdown | cat -e
+9876543210$
+$>
