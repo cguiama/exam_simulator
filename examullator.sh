@@ -123,9 +123,9 @@ for LEVEL in 00 01 02 03 04 05; do
                     # -----------------------------------------------------
 
                     echo -e "\n========================================="
-                    echo -e " ${GREEN}SUCESSO: Avançando para o próximo desafio.${NC}"
+                    echo -e " ${GREEN}SUCESSO: Resposta exata. Lógica validada.${NC}"
                     echo -e "========================================="
-                    sleep 2
+                    read -p ">>> Pressione [ENTER] para avançar..."
                 else
                     echo -e "\n>>> ${RED}Avaliação falhou.${NC}"
                     read -p ">>> Pressione [ENTER] para tentar novamente..."
