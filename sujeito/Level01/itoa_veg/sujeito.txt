@@ -1,0 +1,14 @@
+Assignment name  : itoa_veg
+Expected files   : itoa_veg.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+
+Escreva uma função que receba um número inteiro (representando o peso de um vegetal)
+e o converta em uma string (array de caracteres) terminada em '\0'.
+
+A função deve retornar o ponteiro para essa nova string, que deve ser alocada dinamicamente.
+Números negativos devem ser suportados.
+A função deve lidar perfeitamente com o limite mínimo dos inteiros (INT_MIN).
+
+Sua função deve ser declarada da seguinte forma:
+char *itoa_veg(int nbr);

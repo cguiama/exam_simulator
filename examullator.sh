@@ -12,6 +12,23 @@ NC='\033[0m'
 
 mkdir -p "$RENDU_DIR"
 mkdir -p "$TRACES_DIR"
+touch .ryu_history # Garante que o arquivo de histórico exista
+
+# Função de ordenação ponderada pelo histórico
+sort_by_history() {
+    local POOL="$1"
+    local QTD="$2"
+
+    # Se a pool estiver vazia, não faz nada
+    if [ -z "$POOL" ]; then return; fi
+
+    for ex in $POOL; do
+        local ex_name=$(basename "$ex")
+        # Busca a contagem no disco; se não existir, assume 0
+        local count=$(grep "^$ex_name:" .ryu_history 2>/dev/null | cut -d':' -f2)
+        echo "${count:-0} $RANDOM $ex"
+    done | sort -n -k1,1 -k2,2 | head -n "$QTD" | awk '{print $3}'
+}
 
 for LEVEL in 00 01 02 03 04 05; do
     LEVEL_DIR="$SUBJECTS_DIR/Level$LEVEL"
@@ -28,27 +45,28 @@ for LEVEL in 00 01 02 03 04 05; do
         AVAILABLE_NO_ARGS=$(for ex in $NO_ARGS; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_WITH_ARGS=$(for ex in $WITH_ARGS; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
 
-        PART_1=$(echo "$AVAILABLE_NO_ARGS" | shuf -n 3)
-        PART_2=$(echo "$AVAILABLE_WITH_ARGS" | shuf -n 2)
+        PART_1=$(sort_by_history "$AVAILABLE_NO_ARGS" 3)
+        PART_2=$(sort_by_history "$AVAILABLE_WITH_ARGS" 2)
 
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "01" ]; then
         # Level 01: Fila Curada
         BASE="first_seed bark_meow print_veg strcpy_pet strlen_pet swap_veg repeat_bark rev_veg rotone_pet rot_13_veg search_treat ulstr_pet even_pet putnbr_pet"
-        ADVANCED="last_seed title_pet count_seeds atoi_veg"
+        ADVANCED="last_seed title_pet count_seeds atoi_veg itoa_veg"
 
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
 
-        PART_1=$(echo "$AVAILABLE_BASE" | shuf -n 3)
-        PART_2=$(echo "$AVAILABLE_ADV" | shuf -n 2)
+        PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
+        PART_2=$(sort_by_history "$AVAILABLE_ADV" 2)
 
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     else
-        # Para os próximos níveis (02, 03...), o sorteio volta a ser totalmente aleatório
-        EXERCISES=$(find "$LEVEL_DIR" -mindepth 1 -maxdepth 1 -type d | shuf -n 5)
+        # Para os próximos níveis (02, 03...), pega tudo e passa pelo filtro histórico
+        ALL_AVAILABLE=$(find "$LEVEL_DIR" -mindepth 1 -maxdepth 1 -type d)
+        EXERCISES=$(sort_by_history "$ALL_AVAILABLE" 5)
     fi
 
     CURRENT_Q=1
@@ -93,6 +111,17 @@ for LEVEL in 00 01 02 03 04 05; do
                 if [ $? -eq 0 ]; then
                     PASSED=true
                     ((CURRENT_Q++))
+
+                    # -----------------------------------------------------
+                    # ATUALIZA A PERSISTÊNCIA NO DISCO
+                    # -----------------------------------------------------
+                    CURR_COUNT=$(grep "^$EX_NAME:" .ryu_history 2>/dev/null | cut -d':' -f2)
+                    CURR_COUNT=${CURR_COUNT:-0}
+                    grep -v "^$EX_NAME:" .ryu_history > .ryu_history.tmp 2>/dev/null
+                    echo "$EX_NAME:$((CURR_COUNT + 1))" >> .ryu_history.tmp
+                    mv .ryu_history.tmp .ryu_history
+                    # -----------------------------------------------------
+
                     echo -e "\n========================================="
                     echo -e " ${GREEN}SUCESSO: Avançando para o próximo desafio.${NC}"
                     echo -e "========================================="
