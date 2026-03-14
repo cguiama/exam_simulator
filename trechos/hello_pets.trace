@@ -1,0 +1,6 @@
+--- ./testes/Level00/hello_pets/expected.txt	2026-03-14 16:24:21.789639311 -0300
++++ /tmp/hello_pets_out.txt	2026-03-14 16:25:00.502063376 -0300
+@@ -1 +1 @@
+-Hello Pets!
++Hello World!
+\ No newline at end of file
