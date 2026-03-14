@@ -76,6 +76,11 @@ for LEVEL in 00 01 02 03 04 05; do
         EX_NAME=$(basename "$EX_PATH")
         PASSED=false
 
+        # Reseta as flags do Mock Git a cada nova questão
+        MOCK_ADDED=false
+        MOCK_COMMITTED=false
+        MOCK_PUSHED=false
+
         while [ "$PASSED" = false ]; do
             clear
 
@@ -95,15 +100,61 @@ for LEVEL in 00 01 02 03 04 05; do
             echo -e "\n---------------------------------------------------"
             echo -e ">>> Crie seu arquivo C dentro de: ${RED}$RENDU_DIR/$EX_NAME/${NC}"
 
-            echo -ne ">>> Digite '${YELLOW}testme${NC}' para avaliar ou '${YELLOW}finite${NC}' para sair: "
+            echo -ne ">>> Digite os comandos do git ou '${YELLOW}grademe${NC}' para avaliar ('${YELLOW}finish${NC}' para sair): "
             read RAW_CMD
 
-            CMD=$(echo "$RAW_CMD" | tr '[:upper:]' '[:lower:]')
+            # Pega a primeira palavra para checar o comando base
+            CMD=$(echo "$RAW_CMD" | awk '{print $1}' | tr '[:upper:]' '[:lower:]')
 
-            if [ "$CMD" == "finite" ]; then
+            if [ "$CMD" == "finish" ]; then
                 echo "Encerrando a sessão do examullator."
                 exit 0
-            elif [ "$CMD" == "testme" ]; then
+
+            # --- MÁQUINA DE ESTADO DO GIT SIMULADO ---
+            elif [ "$CMD" == "git" ]; then
+                SUB_CMD=$(echo "$RAW_CMD" | awk '{print $2}' | tr '[:upper:]' '[:lower:]')
+
+                if [ "$SUB_CMD" == "add" ]; then
+                    MOCK_ADDED=true
+                    echo -e "${GREEN}[Mock Vogsphere] Arquivos rastreados (staging area).${NC}"
+                    sleep 1
+                elif [ "$SUB_CMD" == "commit" ]; then
+                    if [ "$MOCK_ADDED" = true ]; then
+                        MOCK_COMMITTED=true
+                        MOCK_ADDED=false # Limpa o stage após o commit
+                        echo -e "${GREEN}[Mock Vogsphere] Commit salvo localmente.${NC}"
+                    else
+                        echo -e "${RED}[Mock Vogsphere] Nada para commitar. Faltou o 'git add'.${NC}"
+                    fi
+                    sleep 1
+                elif [ "$SUB_CMD" == "push" ]; then
+                    if [ "$MOCK_COMMITTED" = true ]; then
+                        MOCK_PUSHED=true
+                        MOCK_COMMITTED=false # Limpa os commits pendentes
+                        echo -e "${GREEN}[Mock Vogsphere] Push concluído! Código no servidor da prova.${NC}"
+                    else
+                        echo -e "${RED}[Mock Vogsphere] Tudo atualizado. Não há novos commits locais.${NC}"
+                    fi
+                    sleep 1
+                else
+                    echo -e "[!] Comando git não suportado no mock. Use add, commit ou push."
+                    sleep 1
+                fi
+
+            # --- AVALIADOR ---
+            elif [ "$CMD" == "grademe" ]; then
+
+                # Bloqueio caso tente avaliar sem enviar para a Vogsphere
+                if [ "$MOCK_PUSHED" = false ]; then
+                    echo -e "\n${RED}[ERRO FATAL] A pasta no servidor está vazia ou desatualizada!${NC}"
+                    echo -e "Você precisa executar o fluxo antes de avaliar:"
+                    echo -e "1. git add ."
+                    echo -e "2. git commit -m \"teste\""
+                    echo -e "3. git push"
+                    read -p ">>> Pressione [ENTER] para tentar de novo..."
+                    continue
+                fi
+
                 echo -e "\nIniciando avaliação..."
 
                 $GRADER "$EX_NAME"
@@ -128,7 +179,13 @@ for LEVEL in 00 01 02 03 04 05; do
                     read -p ">>> Pressione [ENTER] para avançar..."
                 else
                     echo -e "\n>>> ${RED}Avaliação falhou.${NC}"
-                    read -p ">>> Pressione [ENTER] para tentar novamente..."
+
+                    # Se falhar, reseta as flags para forçar você a fazer o push da correção
+                    MOCK_ADDED=false
+                    MOCK_COMMITTED=false
+                    MOCK_PUSHED=false
+
+                    read -p ">>> Pressione [ENTER] para corrigir seu código..."
                 fi
             else
                 echo -e "\n[!] Comando não reconhecido."

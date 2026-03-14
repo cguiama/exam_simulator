@@ -15,7 +15,7 @@ Em seguida, clique em **Fork**.
 Abra o seu terminal e clone a **sua** versão do repositório (substitua `SEU_USUARIO` pelo seu login do GitHub):
 
 ```bash
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
 cd NOME_DO_REPOSITORIO
 ```
 
@@ -35,13 +35,27 @@ Agora, basta iniciar o simulador. Ele sorteará os exercícios automaticamente r
 
 ---
 
-## 🛠️ Como funciona a avaliação?
+## 🛠️ Como funciona a avaliação? (Atenção ao Mock Git)
+
+Para simular a pressão e a memória muscular da prova real, o avaliador exige o fluxo completo de versionamento (Mock Vogsphere) antes de corrigir seu código:
+
 1. O simulador pedirá que você crie a sua solução em C dentro da pasta `ryu/nome_do_exercicio/`.
-2. Após escrever e salvar seu código, volte ao terminal do `examullator.sh` e digite `testme`.
-3. O `grader.sh` entrará em ação, compilará seu código com as flags estritas (`-Wall -Wextra -Werror`) e comparará a saída exata da sua lógica com a saída esperada usando `diff`.
-4. Se houver falhas de memória (Segfault) ou loop infinito (Timeout), o avaliador cortará a execução para proteger sua máquina.
-5. Se houver diferenças na saída, um log detalhado será gerado na pasta `trechos/` para você debugar.
-6. Para sair a qualquer momento, digite `finite`.
+2. Após escrever e salvar seu código no editor, volte ao terminal do `examullator.sh` e adicione os arquivos na staging area:
+   ```text
+   git add .
+   ```
+3. Salve o estado do seu código com um commit:
+   ```text
+   git commit -m "feat: done"
+   ```
+4. Envie para o servidor simulado:
+   ```text
+   git push
+   ```
+5. Somente após o push concluído, digite **`grademe`** para iniciar a avaliação.
+6. O `grader.sh` entrará em ação, compilará seu código com as flags estritas (`-Wall -Wextra -Werror`) e comparará a saída exata da sua lógica com a saída esperada usando `diff`.
+7. Se houver diferenças na saída, falha de memória (Segfault) ou loop infinito (Timeout), o avaliador cortará a execução. Um log detalhado será gerado na pasta `trechos/` para você debugar, e **o mock git será resetado** (você terá que fazer add/commit/push novamente após corrigir o código).
+8. Para encerrar o simulador a qualquer momento, digite **`finish`**.
 
 ---
 
