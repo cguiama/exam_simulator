@@ -8,12 +8,46 @@ Para usar este simulador e salvar o seu progresso no seu próprio perfil do GitH
 
 ### 1. Star e Fork 🌟
 Antes de baixar, clique na **Estrela (Star)** no canto superior direito para apoiar o projeto.
-Em seguida, clique em **Fork**. 
+Em seguida, clique em **Fork**.
 > **Por que fazer um Fork?** O Fork cria uma cópia exata deste repositório na sua conta. Isso permite que você resolva os exercícios na pasta `ryu/`, faça `git commit` e salve o seu código no seu próprio GitHub, mantendo um portfólio do seu aprendizado.
 
 ### 2. Clone o seu repositório 💻
 Abra o seu terminal e clone a **sua** versão do repositório (substitua `SEU_USUARIO` pelo seu login do GitHub):
 
 ```bash
-git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
+git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
 cd NOME_DO_REPOSITORIO
+```
+
+### 3. Permissões de Execução no Linux 🐧
+Os scripts de orquestração (`examullator.sh` e `grader.sh`) precisam de permissão do sistema operacional para serem executados como programas, e não apenas lidos como texto. Conceda essa permissão com o comando:
+
+```bash
+chmod +x examullator.sh grader.sh testes/*/run_test.sh
+```
+
+### 4. Execute o Examullator 🎯
+Agora, basta iniciar o simulador. Ele sorteará os exercícios automaticamente respeitando as regras de progressão de dificuldade.
+
+```bash
+./examullator.sh
+```
+
+---
+
+## 🛠️ Como funciona a avaliação?
+1. O simulador pedirá que você crie a sua solução em C dentro da pasta `ryu/nome_do_exercicio/`.
+2. Após escrever e salvar seu código, volte ao terminal do `examullator.sh` e digite `testme`.
+3. O `grader.sh` entrará em ação, compilará seu código com as flags estritas (`-Wall -Wextra -Werror`) e comparará a saída exata da sua lógica com a saída esperada usando `diff`.
+4. Se houver falhas de memória (Segfault) ou loop infinito (Timeout), o avaliador cortará a execução para proteger sua máquina.
+5. Se houver diferenças na saída, um log detalhado será gerado na pasta `trechos/` para você debugar.
+6. Para sair a qualquer momento, digite `finite`.
+
+---
+
+## 🤝 Encontrou um bug ou quer contribuir?
+
+Se você tem **certeza absoluta** de que a lógica da sua memória e a manipulação dos seus ponteiros estão corretas, mas o avaliador insiste em reprovar, pode haver um edge case não mapeado ou um bug nos arquivos de teste (como um `\n` invisível faltando no `expected.txt`).
+
+* **Abrir uma Issue:** Vá na aba "Issues" deste repositório original e descreva o problema. Mostre a saída do seu terminal e o log de erro gerado na pasta `trechos/`.
+* **Pull Requests (PR):** Conseguiu consertar um teste quebrado ou quer adicionar um exercício novo com a nossa temática de Pets/Veggies? Faça o commit na sua branch, abra um Pull Request e vamos evoluir a arquitetura do simulador juntos!
