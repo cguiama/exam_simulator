@@ -1,0 +1,10 @@
+Assignment name  : pack_size
+Expected files   : pack_size.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Retorne a quantidade de elementos de uma lista encadeada.
+typedef struct s_list {
+    struct s_list *next;
+    void          *data;
+} t_list;
+int pack_size(t_list *begin_list);

@@ -1,0 +1,6 @@
+Assignment name  : range_veg
+Expected files   : range_veg.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Aloque um array de inteiros e preencha com o intervalo do início ao fim.
+int *range_veg(int start, int end);

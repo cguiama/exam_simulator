@@ -1,0 +1,7 @@
+Assignment name  : clean_fur
+Expected files   : clean_fur.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba uma string e a exiba com exatamente um espaço
+entre as palavras, sem espaços ou tabulações no início ou no fim.
+Se houver erro nos argumentos, exiba '\n'.

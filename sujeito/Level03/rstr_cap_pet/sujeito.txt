@@ -1,0 +1,6 @@
+Assignment name  : rstr_cap_pet
+Expected files   : rstr_cap_pet.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Transforme em maiúscula apenas a *última* letra de cada palavra em todos os
+argumentos. O resto deve ser minúsculo.

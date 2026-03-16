@@ -1,0 +1,6 @@
+Assignment name  : stretch_leash
+Expected files   : stretch_leash.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que faça o mesmo que clean_fur, mas separe as palavras
+com exatamente TRÊS espaços.

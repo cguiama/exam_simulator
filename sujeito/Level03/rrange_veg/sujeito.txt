@@ -1,0 +1,6 @@
+Assignment name  : rrange_veg
+Expected files   : rrange_veg.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Aloque um array de inteiros e preencha com o intervalo em ordem *reversa* do fim ao início.
+int *rrange_veg(int start, int end);

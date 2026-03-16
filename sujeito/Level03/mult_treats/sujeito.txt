@@ -1,0 +1,6 @@
+Assignment name  : mult_treats
+Expected files   : mult_treats.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Receba um inteiro positivo. Imprima a tabuada do 1 ao 9 formatada
+("1 x numero = resultado").
