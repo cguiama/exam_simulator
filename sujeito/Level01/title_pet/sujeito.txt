@@ -1,20 +1,6 @@
 Assignment name  : title_pet
 Expected files   : title_pet.c
-Allowed functions:
+Allowed functions: write
 --------------------------------------------------------------------------------
-
-Escreva um programa que receba uma string e a exiba com a primeira letra de cada palavra em maiúscula.
-ATENÇÃO À REGRA: O programa converte apenas a primeira letra da palavra para maiúscula (se já não for).
-O resto da palavra (incluindo letras maiúsculas no meio dela) deve permanecer EXATAMENTE como foi passado no input.
-
-Uma palavra é delimitada por espaços/tabulações.
-O resultado deve ser seguido de uma nova linha (\n).
-Se o número de argumentos não for 1, o programa exibe apenas uma nova linha.
-
-Exemplos:
-$> ./title_pet "cxDmc e ouTra paLavra" | cat -e
-CxDmc E OuTra PaLavra$
-$> ./title_pet "   teste   de GATINHO" | cat -e
-   Teste   De GATINHO$
-$> ./title_pet | cat -e
-$
+Escreva um programa que torne maiúscula apenas a primeira letra de CADA argumento
+(se a primeira letra for um caractere alfabético) e as exiba na tela seguidas de \n.

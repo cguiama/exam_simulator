@@ -2,10 +2,5 @@ Assignment name  : strlen_pet
 Expected files   : strlen_pet.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
-Reproduza o comportamento exato da função strlen (man strlen).
-
-A função deve retornar o tamanho da string, contando os bytes até o caractere nulo '\0'.
-
-Sua função deve ser declarada da seguinte forma:
+Reproduza o comportamento da função strlen (man strlen).
 int strlen_pet(char *str);

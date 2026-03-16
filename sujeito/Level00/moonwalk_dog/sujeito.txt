@@ -1,0 +1,6 @@
+Assignment name  : moonwalk_dog
+Expected files   : moonwalk_dog.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva uma função que exiba o alfabeto em letras minúsculas, em ordem decrescente ('z' a 'a').
+void moonwalk_dog(void);

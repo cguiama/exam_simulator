@@ -2,9 +2,6 @@ Assignment name  : max_pet
 Expected files   : max_pet.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
 Escreva uma função que varra um array de inteiros e retorne o maior valor contido nele.
 Se o array estiver vazio (len for 0), a função deve retornar 0.
-
-Sua função deve ser declarada da seguinte forma:
 int max_pet(int* tab, unsigned int len);

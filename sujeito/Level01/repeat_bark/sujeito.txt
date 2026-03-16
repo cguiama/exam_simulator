@@ -2,22 +2,5 @@ Assignment name  : repeat_bark
 Expected files   : repeat_bark.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
-Escreva um programa chamado repeat_bark que receba uma string (latido) e a exiba,
-repetindo cada caractere alfabético de acordo com seu índice no alfabeto.
-
-'a' vira 'a', 'b' vira 'bb', 'e' vira 'eeeee', etc.
-'A' vira 'A', 'B' vira 'BB', 'E' vira 'EEEEE', etc.
-
-Caracteres que não são letras devem permanecer inalterados.
-O programa deve sempre exibir uma nova linha (\n) ao final.
-
-Se o número de argumentos não for 1, apenas exiba uma nova linha.
-
-Exemplos:
-$> ./repeat_bark "abc" | cat -e
-abbccc$
-$> ./repeat_bark "Alex." | cat -e
-Allllllllllllleeeeexxxxxxxxxxxxxxxxxxxxxxxx.$
-$> ./repeat_bark | cat -e
-$
+Escreva um programa que receba uma string e exiba cada caractere alfabético de
+acordo com o seu índice no alfabeto ('a' = 1 vez, 'b' = 2 vezes...).

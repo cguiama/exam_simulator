@@ -2,9 +2,5 @@ Assignment name  : count_veggies
 Expected files   : count_veggies.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
-É hora da colheita! Escreva uma função que exiba todos os dígitos
-em ordem crescente, representando a contagem dos vegetais.
-
-Sua função deve ser declarada da seguinte forma:
+Escreva uma função que exiba todos os dígitos, em ordem crescente.
 void count_veggies(void);

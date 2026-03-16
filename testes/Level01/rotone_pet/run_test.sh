@@ -1,6 +1,4 @@
 #!/bin/bash
-BIN_PATH=$1
-
-"$BIN_PATH" "Gato, Cachorro!"
-"$BIN_PATH" "zZ"
-"$BIN_PATH"
+"$1" "abc"
+"$1" "Les haricots 42"
+"$1" ""

@@ -2,7 +2,5 @@ Assignment name  : strcmp_pet
 Expected files   : strcmp_pet.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
-Reproduza o comportamento da função strcmp (man strcmp)[cite: 4].
-Sua função deve ser declarada da seguinte forma[cite: 5]:
+Reproduza o comportamento da função strcmp (man strcmp).
 int strcmp_pet(char *s1, char *s2);

@@ -1,2 +1,1 @@
-Gatinho copiado com sucesso.
-Retorno do ponteiro: Gatinho copiado com sucesso.
+Gato e Cachorro

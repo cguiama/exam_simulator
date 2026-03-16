@@ -2,9 +2,5 @@ Assignment name  : swap_paws
 Expected files   : swap_paws.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
-Escreva uma função que receba um byte (unsigned char), troque a sua metade direita
-(4 bits menos significativos) com a sua metade esquerda (4 bits mais significativos) e retorne o byte modificado.
-
-Sua função deve ser declarada da seguinte forma:
+Escreva uma função que receba um byte (unsigned char), troque a sua metade direita (4 bits menos significativos) com a sua metade esquerda (4 bits mais significativos) e retorne o byte modificado.
 unsigned char swap_paws(unsigned char octet);

@@ -2,8 +2,5 @@ Assignment name  : strcpy_pet
 Expected files   : strcpy_pet.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
-Reproduza o comportamento exato da função strcpy (man strcpy).
-
-Sua função deve ser declarada da seguinte forma:
+Reproduza o comportamento da função strcpy (man strcpy).
 char *strcpy_pet(char *s1, char *s2);

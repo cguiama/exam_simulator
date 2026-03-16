@@ -2,31 +2,7 @@ Assignment name  : bark_meow
 Expected files   : bark_meow.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
-Escreva um programa que exiba os números de 1 a 100, cada um separado por uma nova linha.
-Se o número for um múltiplo de 3, o programa deve exibir 'bark' em vez do número.
-Se o número for um múltiplo de 5, o programa deve exibir 'meow' em vez do número.
-Se o número for um múltiplo de ambos 3 e 5, o programa deve exibir 'barkmeow' em vez do número.
-
-Exemplo:
-$> ./bark_meow
-1
-2
-bark
-4
-meow
-bark
-7
-8
-bark
-meow
-11
-bark
-13
-14
-barkmeow
-[...]
-98
-bark
-meow
-$>
+Escreva um programa que imprima os números de 1 a 100, cada um em uma nova linha.
+Múltiplos de 3: imprima "bark"
+Múltiplos de 5: imprima "meow"
+Múltiplos de ambos: imprima "barkmeow"

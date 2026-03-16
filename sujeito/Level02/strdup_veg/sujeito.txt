@@ -2,10 +2,7 @@ Assignment name  : strdup_veg
 Expected files   : strdup_veg.c
 Allowed functions: malloc
 --------------------------------------------------------------------------------
-
 Reproduza o comportamento da função strdup (man strdup).
 Sua função deve alocar memória suficiente na Heap para criar uma cópia exata
 da string passada como parâmetro e retornar um ponteiro para essa nova string.
-
-Sua função deve ser declarada da seguinte forma:
 char *strdup_veg(char *src);

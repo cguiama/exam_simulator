@@ -1,10 +1,8 @@
 #!/bin/bash
-BIN_PATH=$1
-
-"$BIN_PATH" "faya" "fgvvfdxcacpolhyghbreda"
-"$BIN_PATH" "faya" "fgvvfdxcacpolhyghbred"
-"$BIN_PATH" "quarante deux" "qfqfsudfvdgdtfafsfgdtyregfdvfvetyudrgxfefsdftcbvcvfdgxfg"
-"$BIN_PATH" "error" "rrroe"
-"$BIN_PATH" "vazio" ""
-"$BIN_PATH" "um" "dois" "tres"
-"$BIN_PATH"
+"$1" "faya" "fgvvfdxcacpolhyghbreda"
+"$1" "faya" "fgvvfdxcacpolhyghbred"
+"$1" "quarante deux" "qfqfsudfvdgdtfafsfgdtyregfdvfvetyudrgxfefsdftcbvcvfdgxfg"
+"$1" "error" "rrroe"
+"$1" "vazio" ""
+"$1" "um" "dois" "tres"
+"$1"

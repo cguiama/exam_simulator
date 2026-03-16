@@ -2,9 +2,6 @@ Assignment name  : rev_paws
 Expected files   : rev_paws.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
 Escreva uma função que receba um byte (unsigned char), inverta completamente a ordem
 física de seus bits e retorne o byte espelhado.
-
-Sua função deve ser declarada da seguinte forma:
 unsigned char rev_paws(unsigned char octet);

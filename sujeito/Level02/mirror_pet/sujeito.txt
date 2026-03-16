@@ -2,13 +2,8 @@ Assignment name  : mirror_pet
 Expected files   : mirror_pet.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
 Escreva um programa que receba uma string (o nome de um pet) e exiba essa string
 substituindo cada caractere alfabético pelo caractere alfabético oposto na tabela ASCII.
-
-'a' vira 'z', 'Z' vira 'A'
-'d' vira 'w', 'M' vira 'N'
-
-A conversão mantém a caixa (maiúscula/minúscula).
-Caracteres que não são letras permanecem inalterados.
-Se o número de argumentos não for 1, exiba apenas uma nova linha ('\n').
+'a' vira 'z', 'Z' vira 'A', 'd' vira 'w', 'M' vira 'N'.
+A conversão mantém a caixa. Caracteres que não são letras permanecem inalterados.
+Se o número de argumentos não for 1, exiba apenas '\n'.

@@ -2,10 +2,5 @@ Assignment name  : print_veg
 Expected files   : print_veg.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
-Escreva uma função que exiba uma string na saída padrão (stdout).
-
-O ponteiro que você receberá apontará para o primeiro caractere da string.
-
-Sua função deve ser declarada da seguinte forma:
+Escreva uma função que exiba uma string na saída padrão.
 void print_veg(char *str);

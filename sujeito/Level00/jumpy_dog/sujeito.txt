@@ -1,13 +1,6 @@
 Assignment name  : jumpy_dog
 Expected files   : jumpy_dog.c
-Allowed functions: write
+Allowed functions:
 --------------------------------------------------------------------------------
-
-Escreva um programa chamado jumpy_dog que exiba o alfabeto, alternando
-entre minúsculas e maiúsculas, onde as letras impares são minusculas e letras
-pares são maiusculas, seguido de uma nova linha (\n).
-
-Exemplo:
-$> ./jumpy_dog | cat -e
-aBcDeFgHiJkLmNoPqRsTuVwXyZ$
-$>
+Escreva uma função que troque o conteúdo de dois inteiros cujos endereços são passados como parâmetros.
+void jumpy_dog(int *a, int *b);

@@ -1,10 +1,8 @@
-#include <unistd.h>
-
-void abc_pets(void);
-
-int main(void)
-{
-    abc_pets();
-    write(1, "\n", 1);
-    return (0);
+#include <stdio.h>
+void abc_pets(int *nbr);
+int main(void) {
+    int n = 0;
+    abc_pets(&n);
+    printf("%d\n", n);
+    return 0;
 }

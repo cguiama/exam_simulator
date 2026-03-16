@@ -1,10 +1,7 @@
 #!/bin/bash
-BIN_PATH=$1
-
-"$BIN_PATH" "   girassol   milho "
-"$BIN_PATH" "tomate"
-"$BIN_PATH"
-# --- CASOS HOSTIS ABAIXO ---
-"$BIN_PATH" "          "
-"$BIN_PATH" "	 tabulacoes e  espacos"
-"$BIN_PATH" "a" "b"
+"$1" "   girassol   milho "
+"$1" "tomate"
+"$1"
+"$1" "          "
+"$1" "	 tabulacoes e  espacos"
+"$1" "a" "b"

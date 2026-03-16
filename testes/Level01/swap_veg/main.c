@@ -1,14 +1,8 @@
 #include <stdio.h>
-
-void swap_veg(int *a, int *b);
-
-int main(void)
-{
-    int a = 42;
-    int b = 24;
-
-    printf("Antes: a = %d, b = %d\n", a, b);
-    swap_veg(&a, &b);
-    printf("Depois: a = %d, b = %d\n", a, b);
-    return (0);
+void swap_veg(char *a, char *b);
+int main(void) {
+    char s1[] = "abc"; char s2[] = "xyz";
+    swap_veg(s1, s2);
+    printf("%s %s\n", s1, s2);
+    return 0;
 }

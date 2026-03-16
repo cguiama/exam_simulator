@@ -2,9 +2,6 @@ Assignment name  : print_paws
 Expected files   : print_paws.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
 Escreva uma função que receba um byte (unsigned char) e imprima os seus 8 bits
 no terminal, da esquerda para a direita (do bit mais significativo para o menos significativo).
-
-Sua função deve ser declarada da seguinte forma:
 void print_paws(unsigned char octet);

@@ -1,16 +1,6 @@
 Assignment name  : atoi_veg
 Expected files   : atoi_veg.c
-Allowed functions: write
+Allowed functions:
 --------------------------------------------------------------------------------
-
-Escreva uma função que converta o prefixo inicial de uma string (representando a contagem de vegetais) em um número inteiro (tipo int).
-
-A função deve se comportar de forma idêntica à função atoi do sistema (man atoi).
-Regras de varredura:
-1. O ponteiro deve ignorar qualquer caractere de espaço em branco (espaço, tabulação, quebra de linha, etc.) no início da string.
-2. Em seguida, pode haver um único sinal de mais ('+') ou menos ('-').
-3. Finalmente, a função deve ler a sequência de dígitos na base 10 e convertê-los para um valor numérico.
-4. A leitura para no primeiro caractere que não for um dígito válido.
-
-Sua função deve ser declarada da seguinte forma:
+Reproduza o comportamento da função atoi.
 int atoi_veg(char *str);

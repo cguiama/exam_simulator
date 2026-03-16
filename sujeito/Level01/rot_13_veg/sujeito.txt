@@ -2,21 +2,4 @@ Assignment name  : rot_13_veg
 Expected files   : rot_13_veg.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-
-Escreva um programa que receba uma string e a exiba, substituindo cada caractere alfabético
-pelo 13º caractere seguinte na ordem alfabética.
-
-'a' vira 'n', 'z' vira 'm'.
-'A' vira 'N', 'Z' vira 'M'.
-
-Caracteres que não são letras permanecem inalterados.
-O programa deve sempre exibir uma nova linha (\n) ao final.
-Se o número de argumentos não for 1, apenas exiba uma nova linha.
-
-Exemplos:
-$> ./rot_13_veg "Alface e Tomate" | cat -e
-Ny snpr r Gbzngr$
-$> ./rot_13_veg "zZ" | cat -e
-mM$
-$> ./rot_13_veg | cat -e
-$
+Substitua cada letra de uma string pela 13ª letra seguinte no alfabeto.

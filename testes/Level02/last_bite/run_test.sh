@@ -1,9 +1,7 @@
 #!/bin/bash
-BIN_PATH=$1
-
-"$BIN_PATH" "FOR PONY"
-"$BIN_PATH" "this        ...       is sparta, then again, maybe    not"
-"$BIN_PATH" "   "
-"$BIN_PATH" "a" "b"
-"$BIN_PATH" "  lorem,ipsum  "
-"$BIN_PATH"
+"$1" "FOR PONY"
+"$1" "this        ...       is sparta, then again, maybe    not"
+"$1" "   "
+"$1" "a" "b"
+"$1" "  lorem,ipsum  "
+"$1"

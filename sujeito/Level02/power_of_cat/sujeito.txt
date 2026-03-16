@@ -2,9 +2,6 @@ Assignment name  : power_of_cat
 Expected files   : power_of_cat.c
 Allowed functions:
 --------------------------------------------------------------------------------
-
 Escreva uma função que determine se um número passado como argumento é uma potência de 2.
-A função deve retornar 1 se for potência de 2, ou 0 caso contrário.
-
-Sua função deve ser declarada da seguinte forma:
+Retorne 1 se for, ou 0 caso contrário.
 int power_of_cat(unsigned int n);

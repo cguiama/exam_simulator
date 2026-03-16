@@ -1,2 +1,1 @@
-Antes: a = 42, b = 24
-Depois: a = 24, b = 42
+xyz abc
