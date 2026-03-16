@@ -1,0 +1,10 @@
+Assignment name  : veg_options
+Expected files   : veg_options.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que leia argumentos (iniciados com '-') e ative os bits
+correspondentes em um inteiro de 32 bits.
+Ex: '-a' liga o bit 0, '-b' liga o bit 1... '-z' liga o bit 25.
+Imprima os 32 bits divididos em blocos de 8.
+Se o argumento '-h' for passado, imprima "options: abcdefghijklmnopqrstuvwxyz".
+Se houver uma opção inválida, imprima "Invalid Option".

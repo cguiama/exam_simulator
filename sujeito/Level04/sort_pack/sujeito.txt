@@ -1,0 +1,7 @@
+Assignment name  : sort_pack
+Expected files   : sort_pack.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Ordene uma lista encadeada usando a função de comparação (ponteiro de função).
+Pode trocar apenas os dados, não precisa alterar os ponteiros da lista.
+t_list *sort_pack(t_list *lst, int (*cmp)(int, int));

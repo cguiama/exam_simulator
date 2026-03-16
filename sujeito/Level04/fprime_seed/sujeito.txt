@@ -1,0 +1,6 @@
+Assignment name  : fprime_seed
+Expected files   : fprime_seed.c
+Allowed functions: printf, atoi
+--------------------------------------------------------------------------------
+Escreva um programa que receba um inteiro positivo e exiba seus fatores primos
+na saída padrão, separados por '*'.

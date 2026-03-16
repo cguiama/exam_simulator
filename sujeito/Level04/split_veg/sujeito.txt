@@ -1,0 +1,7 @@
+Assignment name  : split_veg
+Expected files   : split_veg.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Corte uma string em palavras (separadas por espaços/tabs) e retorne uma Matriz
+2D null-terminated (char **).
+char **split_veg(char *str);

@@ -1,0 +1,6 @@
+Assignment name  : sort_veggies
+Expected files   : sort_veggies.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Ordene um array de inteiros em ordem crescente (in-place).
+void sort_veggies(int *tab, unsigned int size);

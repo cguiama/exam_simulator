@@ -1,0 +1,6 @@
+Assignment name  : rev_bark
+Expected files   : rev_bark.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+Escreva um programa que receba uma string e exiba suas palavras na ordem inversa.
+Palavras são separadas apenas por ' ' ou '\t'.

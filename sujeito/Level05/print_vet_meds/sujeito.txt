@@ -1,0 +1,8 @@
+Assignment name  : print_vet_meds
+Expected files   : print_vet_meds.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva uma função que receba um endereço de memória e um tamanho, e exiba um
+Hex Dump (16 bytes por linha, formatado em pares hexadecimais, seguido dos
+caracteres ASCII imprimíveis ou '.' para não imprimíveis).
+void print_vet_meds(const void *addr, size_t size);

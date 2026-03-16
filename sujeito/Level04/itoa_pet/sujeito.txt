@@ -1,0 +1,7 @@
+Assignment name  : itoa_pet
+Expected files   : itoa_pet.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Aloque e retorne uma string representando o inteiro recebido como argumento.
+O tratamento de números negativos e do INT_MIN é obrigatório.
+char *itoa_pet(int nbr);

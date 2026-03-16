@@ -1,0 +1,7 @@
+Assignment name  : vet_visit
+Expected files   : vet_visit.c
+Allowed functions: free
+--------------------------------------------------------------------------------
+Remova os nós da lista se a função 'cmp' retornar 0.
+Atenção à dupla indireção (**) no ponteiro base para lidar com o head.
+void vet_visit(t_list **begin_list, void *data_ref, int (*cmp)());
