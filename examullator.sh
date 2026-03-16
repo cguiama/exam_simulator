@@ -37,36 +37,59 @@ for LEVEL in 00 01 02 03 04 05; do
         continue
     fi
 
-    if [ "$LEVEL" == "00" ]; then
-        # Level 00: Fila Curada
+if [ "$LEVEL" == "00" ]; then
         NO_ARGS="abc_pets count_veggies hello_pets jumpy_dog moonwalk_dog only_zucchini pet_countdown find_dog"
         WITH_ARGS="first_veggie last_veggie"
-
         AVAILABLE_NO_ARGS=$(for ex in $NO_ARGS; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_WITH_ARGS=$(for ex in $WITH_ARGS; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
-
         PART_1=$(sort_by_history "$AVAILABLE_NO_ARGS" 3)
         PART_2=$(sort_by_history "$AVAILABLE_WITH_ARGS" 2)
-
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "01" ]; then
-        # Level 01: Fila Curada
         BASE="first_seed bark_meow print_veg strcpy_pet strlen_pet swap_veg repeat_bark rev_veg rotone_pet rot_13_veg search_treat ulstr_pet even_pet putnbr_pet"
         ADVANCED="last_seed title_pet count_seeds atoi_veg itoa_veg"
-
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
-
         PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
         PART_2=$(sort_by_history "$AVAILABLE_ADV" 2)
-
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
-    else
-        # Para os próximos níveis (02, 03...), pega tudo e passa pelo filtro histórico
-        ALL_AVAILABLE=$(find "$LEVEL_DIR" -mindepth 1 -maxdepth 1 -type d)
-        EXERCISES=$(sort_by_history "$ALL_AVAILABLE" 5)
+    elif [ "$LEVEL" == "02" ]; then
+        BASE="print_paws swap_paws rev_paws strrev_veg mirror_pet strcmp_pet max_pet power_of_cat"
+        ADVANCED="inter_veg union_veg seed_match last_bite strdup_veg calc_pet"
+        AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
+        PART_2=$(sort_by_history "$AVAILABLE_ADV" 2)
+        EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
+
+    elif [ "$LEVEL" == "03" ]; then
+        BASE="sum_prime_seeds clean_fur stretch_leash count_pets hide_treat lcm_cat pgcd_dog print_hex_veg rstr_cap_pet str_cap_pet mult_treats"
+        ADVANCED="rrange_veg range_veg pack_size"
+        AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
+        PART_2=$(sort_by_history "$AVAILABLE_ADV" 2)
+        EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
+
+    elif [ "$LEVEL" == "04" ]; then
+        BASE="fprime_seed itoa_pet rev_bark rostring_pet sort_veggies"
+        ADVANCED="brain_pug catch_mouse water_crops itoa_base_veg walk_pack vet_visit split_veg sort_pack"
+        AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
+        PART_2=$(sort_by_history "$AVAILABLE_ADV" 2)
+        EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
+
+    elif [ "$LEVEL" == "05" ]; then
+        BASE="biggest_paw veg_options"
+        ADVANCED="cage_match chase_tail print_vet_meds rpn_dog"
+        AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
+        PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
+        PART_2=$(sort_by_history "$AVAILABLE_ADV" 2)
+        EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
     fi
 
     CURRENT_Q=1
