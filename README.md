@@ -23,7 +23,7 @@ cd NOME_DO_REPOSITORIO
 Os scripts de orquestração (`examullator.sh` e `grader.sh`) precisam de permissão do sistema operacional para serem executados como programas, e não apenas lidos como texto. Conceda essa permissão com o comando:
 
 ```bash
-chmod +x examullator.sh grader.sh testes/*/run_test.sh
+./setup_perms.sh
 ```
 
 ### 4. Execute o Examullator 🎯
