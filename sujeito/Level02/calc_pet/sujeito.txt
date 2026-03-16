@@ -1,0 +1,15 @@
+Assignment name  : calc_pet
+Expected files   : calc_pet.c
+Allowed functions: atoi, write
+--------------------------------------------------------------------------------
+
+Escreva um programa que receba três strings representando:
+1. O primeiro operando (um inteiro base 10)
+2. Um operador aritmético ('+', '-', '*', '/', '%')
+3. O segundo operando (um inteiro base 10)
+
+O programa deve converter as strings numéricas, aplicar a operação matemática e exibir
+o resultado no terminal seguido de uma nova linha ('\n').
+
+Se o número de argumentos não for 3, exiba apenas uma nova linha.
+Você pode usar a função printf para formatar a saída decimal.

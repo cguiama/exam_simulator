@@ -1,0 +1,11 @@
+Assignment name  : last_bite
+Expected files   : last_bite.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que receba uma string e exiba a sua última palavra (a última porção
+de texto antes do limite nulo que não seja composta de espaços ou tabulações).
+A palavra deve ser seguida de uma nova linha ('\n').
+
+Se a string não contiver palavras ou se o número de argumentos não for 1,
+exiba apenas uma nova linha.

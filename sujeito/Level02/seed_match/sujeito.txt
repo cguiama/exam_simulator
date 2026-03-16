@@ -1,0 +1,10 @@
+Assignment name  : seed_match
+Expected files   : seed_match.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que receba duas strings e verifique se é possível escrever a
+primeira string utilizando os caracteres da segunda string, respeitando estritamente a ordem.
+
+Se for possível, exiba a primeira string seguida de um '\n'.
+Se não for possível, ou se o número de argumentos não for 2, exiba apenas um '\n'.
