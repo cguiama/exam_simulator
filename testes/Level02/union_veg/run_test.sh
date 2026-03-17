@@ -1,8 +1,0 @@
-#!/bin/bash
-"$1" "zpadinton" "paqefwtdjetyiytjneytjoeyjnejeyj"
-"$1" "ddf6vewg64f" "gtwthgdwthdwfteewhrtag6h4ffdhsd"
-"$1" "rien" "cette phrase ne cache rien"
-"$1" "vazio" ""
-"$1" "" "vazio"
-"$1" "um" "dois" "tres"
-"$1"

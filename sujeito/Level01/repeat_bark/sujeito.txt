@@ -2,5 +2,8 @@ Assignment name  : repeat_bark
 Expected files   : repeat_bark.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Escreva um programa que receba uma string e exiba cada caractere alfabético de
-acordo com o seu índice no alfabeto ('a' = 1 vez, 'b' = 2 vezes...).
+Escreva um programa que receba uma string e a exiba repetindo cada caractere alfabético
+o mesmo número de vezes que seu índice alfabético, seguido de uma nova linha.
+'a' torna-se 'a', 'b' torna-se 'bb', 'e' torna-se 'eeeee', etc...
+A capitalização (maiúsculas/minúsculas) deve permanecer inalterada.
+Se o número de argumentos não for 1, exiba apenas uma nova linha.

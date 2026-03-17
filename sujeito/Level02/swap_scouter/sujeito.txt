@@ -1,0 +1,7 @@
+Assignment name  : swap_scouter
+Expected files   : swap_scouter.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Escreva uma função que receba um byte, troque suas metades (4 bits menos e mais
+significativos) e retorne o resultado.
+unsigned char swap_scouter(unsigned char octet);

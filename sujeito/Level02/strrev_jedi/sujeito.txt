@@ -1,0 +1,7 @@
+Assignment name  : strrev_jedi
+Expected files   : strrev_jedi.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Escreva uma função que inverta (in-place) uma string.
+A função deve retornar o ponteiro recebido como parâmetro.
+char *strrev_jedi(char *str);

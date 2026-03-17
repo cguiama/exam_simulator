@@ -1,0 +1,9 @@
+Assignment name  : calc_force
+Expected files   : calc_force.c
+Allowed functions: atoi, printf, write
+--------------------------------------------------------------------------------
+Escreva um programa que receba três strings:
+A primeira e a terceira são representações de inteiros com sinal na base 10.
+A segunda é um operador aritmético escolhido entre: +, -, *, /, %.
+O programa deve exibir o resultado da operação, seguido de uma nova linha.
+Se o número de parâmetros não for 3, exiba apenas uma nova linha.

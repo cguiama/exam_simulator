@@ -1,0 +1,12 @@
+Assignment name  : mirror_mon
+Expected files   : mirror_mon.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba uma string e a exiba após substituir cada caractere
+alfabético pelo seu oposto no alfabeto, seguido de uma nova linha.
+
+'a' torna-se 'z', 'Z' torna-se 'A'
+'d' torna-se 'w', 'M' torna-se 'N'
+
+A capitalização (maiúsculas/minúsculas) não deve ser alterada.
+Se o número de argumentos não for 1, exiba apenas uma nova linha.

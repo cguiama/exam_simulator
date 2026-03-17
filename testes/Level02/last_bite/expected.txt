@@ -1,7 +1,0 @@
-PONY
-not
-
-
-
-lorem,ipsum
-

@@ -1,0 +1,7 @@
+Assignment name  : union_fusion
+Expected files   : union_fusion.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba duas strings e exiba, sem duplicatas,
+os caracteres que aparecem em qualquer uma das strings, mantendo a ordem.
+Se o número de argumentos não for 2, exiba apenas \n.

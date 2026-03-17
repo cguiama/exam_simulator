@@ -1,0 +1,6 @@
+Assignment name  : print_scouter
+Expected files   : print_scouter.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva uma função que receba um byte e o exiba em binário SEM NOVA LINHA NO FINAL.
+void print_scouter(unsigned char octet);

@@ -1,6 +1,0 @@
-Assignment name  : count_seeds
-Expected files   : count_seeds.c
-Allowed functions:
---------------------------------------------------------------------------------
-Escreva uma função que conte e retorne o número de palavras em uma string.
-int count_seeds(char *str);

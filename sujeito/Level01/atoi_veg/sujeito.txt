@@ -1,6 +1,0 @@
-Assignment name  : atoi_veg
-Expected files   : atoi_veg.c
-Allowed functions:
---------------------------------------------------------------------------------
-Reproduza o comportamento da função atoi.
-int atoi_veg(char *str);

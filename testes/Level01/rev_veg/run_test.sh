@@ -1,4 +1,4 @@
 #!/bin/bash
-"$1" "zucchini"
-"$1" "dubO a POIL"
-"$1" ""
+"$1" "zaz"
+"$1" "dub0 a POIL"
+"$1"

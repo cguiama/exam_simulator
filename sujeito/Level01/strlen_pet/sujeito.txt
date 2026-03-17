@@ -2,5 +2,7 @@ Assignment name  : strlen_pet
 Expected files   : strlen_pet.c
 Allowed functions:
 --------------------------------------------------------------------------------
-Reproduza o comportamento da função strlen (man strlen).
+Escreva uma função que retorne o comprimento de uma string.
+O ponteiro passado para a função contém o endereço do primeiro caractere da string.
+Sua função deve ser declarada da seguinte forma:
 int strlen_pet(char *str);

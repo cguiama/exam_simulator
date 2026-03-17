@@ -1,7 +1,0 @@
-Assignment name  : strrev_veg
-Expected files   : strrev_veg.c
-Allowed functions:
---------------------------------------------------------------------------------
-Escreva uma função que reverta os caracteres de uma string (representando uma fileira de vegetais) in-place (na mesma região de memória).
-Ela deve retornar o ponteiro original da string passada.
-char *strrev_veg(char *str);

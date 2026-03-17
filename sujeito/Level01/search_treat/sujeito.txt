@@ -1,7 +1,9 @@
 Assignment name  : search_treat
 Expected files   : search_treat.c
-Allowed functions: write
+Allowed functions: write, exit
 --------------------------------------------------------------------------------
-Escreva um programa que receba 3 argumentos. O primeiro é uma string.
-O segundo e terceiro são caracteres únicos. Substitua toda ocorrência do
-segundo caractere na string pelo terceiro caractere.
+Escreva um programa que receba 3 argumentos: o primeiro é uma string na qual
+se deseja substituir uma letra (2º argumento) por outra (3º argumento).
+Se o número de argumentos não for 3, exiba apenas uma nova linha.
+Se o segundo argumento não estiver contido na string, o programa apenas reescreve a string original.
+Se o segundo ou o terceiro argumento não forem caracteres únicos, exiba apenas uma nova linha.

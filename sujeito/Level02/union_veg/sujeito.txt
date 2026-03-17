@@ -1,9 +1,0 @@
-Assignment name  : union_veg
-Expected files   : union_veg.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva um programa que receba duas strings e exiba, sem repetições, os caracteres
-que aparecem em qualquer uma das duas strings.
-Os caracteres devem ser exibidos na ordem em que aparecem na linha de comando.
-O resultado deve ser seguido de um '\n'.
-Se o número de argumentos não for 2, exiba apenas '\n'.

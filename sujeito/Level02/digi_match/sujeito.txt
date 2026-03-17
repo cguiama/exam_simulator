@@ -1,0 +1,7 @@
+Assignment name  : digi_match
+Expected files   : digi_match.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba duas strings e verifique se é possível escrever a
+primeira string com os caracteres da segunda respeitando a ordem.
+Se for possível, exiba a string. Caso contrário, exiba apenas \n.

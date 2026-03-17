@@ -2,7 +2,7 @@ Assignment name  : bark_meow
 Expected files   : bark_meow.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Escreva um programa que imprima os números de 1 a 100, cada um em uma nova linha.
-Múltiplos de 3: imprima "bark"
-Múltiplos de 5: imprima "meow"
-Múltiplos de ambos: imprima "barkmeow"
+Escreva um programa que imprima os números de 1 a 100, cada um separado por uma nova linha.
+Se o número for um múltiplo de 3, imprima 'bark' no lugar do número.
+Se o número for um múltiplo de 5, imprima 'meow' no lugar do número.
+Se o número for múltiplo de ambos (3 e 5), imprima 'barkmeow' no lugar do número.

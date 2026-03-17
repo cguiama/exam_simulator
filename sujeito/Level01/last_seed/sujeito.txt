@@ -1,5 +1,0 @@
-Assignment name  : last_seed
-Expected files   : last_seed.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Versão simplificada do Level 1: imprima a última palavra de uma string (delimitada por espaços).

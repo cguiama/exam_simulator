@@ -2,4 +2,8 @@ Assignment name  : rot_13_veg
 Expected files   : rot_13_veg.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Substitua cada letra de uma string pela 13ª letra seguinte no alfabeto.
+Escreva um programa que receba uma string e a exiba, substituindo cada uma de suas
+letras pela letra 13 posições à frente na ordem alfabética.
+'z' torna-se 'm' e 'Z' torna-se 'M'. A capitalização permanece inalterada.
+A saída será seguida por uma nova linha.
+Se o número de argumentos não for 1, o programa exibe apenas uma nova linha.

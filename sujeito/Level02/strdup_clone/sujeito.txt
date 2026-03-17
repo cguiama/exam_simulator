@@ -1,0 +1,7 @@
+Assignment name  : strdup_clone
+Expected files   : strdup_clone.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Reproduza o comportamento da função strdup (man strdup).
+Sua função deve ser declarada da seguinte forma:
+char *strdup_clone(char *src);

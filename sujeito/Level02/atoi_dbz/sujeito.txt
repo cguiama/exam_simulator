@@ -1,0 +1,8 @@
+Assignment name  : atoi_dbz
+Expected files   : atoi_dbz.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+Escreva uma função que converta o argumento string str para um inteiro (tipo int) e o retorne.
+Ela funciona de forma muito similar à função padrão atoi(const char *str).
+Sua função deve ser declarada da seguinte forma:
+int atoi_dbz(const char *str);

@@ -1,0 +1,7 @@
+Assignment name  : is_power_of_ssj
+Expected files   : is_power_of_ssj.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+Escreva uma função que determine se um dado número é uma potência de 2.
+Retorna 1 se for, 0 caso contrário.
+int is_power_of_ssj(unsigned int n);

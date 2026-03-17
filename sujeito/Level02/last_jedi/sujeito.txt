@@ -1,0 +1,7 @@
+Assignment name  : last_jedi
+Expected files   : last_jedi.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba uma string e exiba sua última palavra, seguida de \n.
+Uma palavra é uma seção da string delimitada por espaços/tabulações.
+Se o número de parâmetros não for 1, exiba apenas uma nova linha.

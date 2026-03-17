@@ -1,0 +1,6 @@
+Assignment name  : rev_scouter
+Expected files   : rev_scouter.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Escreva uma função que receba um byte, inverta-o bit a bit e retorne o resultado.
+unsigned char rev_scouter(unsigned char octet);

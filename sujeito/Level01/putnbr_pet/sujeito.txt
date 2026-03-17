@@ -1,7 +1,0 @@
-Assignment name  : putnbr_pet
-Expected files   : putnbr_pet.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva uma função que exiba um inteiro usando a syscall write.
-Lide com os limites da máquina (INT_MIN e negativos).
-void putnbr_pet(int n);

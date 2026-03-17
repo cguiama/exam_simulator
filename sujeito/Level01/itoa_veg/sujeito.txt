@@ -1,6 +1,0 @@
-Assignment name  : itoa_veg
-Expected files   : itoa_veg.c
-Allowed functions: malloc
---------------------------------------------------------------------------------
-Converta um número inteiro para uma string alocada dinamicamente.
-char *itoa_veg(int nbr);

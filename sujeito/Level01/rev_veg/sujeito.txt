@@ -2,5 +2,5 @@ Assignment name  : rev_veg
 Expected files   : rev_veg.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Escreva um programa que receba uma string e a exiba de trás para frente,
-seguida de uma nova linha.
+Escreva um programa que receba uma string e a exiba invertida, seguida de uma nova linha.
+Se o número de parâmetros não for 1, o programa deve exibir apenas uma nova linha.

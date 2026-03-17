@@ -1,6 +1,0 @@
-Assignment name  : title_pet
-Expected files   : title_pet.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva um programa que torne maiúscula apenas a primeira letra de CADA argumento
-(se a primeira letra for um caractere alfabético) e as exiba na tela seguidas de \n.

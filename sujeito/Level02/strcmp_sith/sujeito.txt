@@ -1,0 +1,7 @@
+Assignment name  : strcmp_sith
+Expected files   : strcmp_sith.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Reproduza o comportamento da função strcmp (man strcmp).
+Sua função deve ser declarada da seguinte forma:
+int strcmp_sith(char *s1, char *s2);

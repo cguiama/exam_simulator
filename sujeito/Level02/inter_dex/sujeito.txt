@@ -1,0 +1,7 @@
+Assignment name  : inter_dex
+Expected files   : inter_dex.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba duas strings e exiba, sem duplicatas,
+os caracteres que aparecem em ambas as strings, na ordem em que aparecem na primeira.
+Se o número de argumentos não for 2, exiba apenas um \n.

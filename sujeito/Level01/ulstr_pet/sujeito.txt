@@ -2,4 +2,8 @@ Assignment name  : ulstr_pet
 Expected files   : ulstr_pet.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Escreva um programa que converta as letras maiúsculas em minúsculas e vice-versa.
+Escreva um programa que receba uma string e inverta a capitalização (case)
+de todas as suas letras.
+Outros caracteres (números, espaços, pontuação) permanecem inalterados.
+Você deve exibir o resultado seguido de um \n.
+Se o número de argumentos não for 1, o programa exibe apenas um \n.

@@ -1,0 +1,7 @@
+Assignment name  : max_power
+Expected files   : max_power.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Escreva uma função que retorne o maior número encontrado num array de inteiros.
+Se o array estiver vazio, retorne 0.
+int max_power(int* tab, unsigned int len);
