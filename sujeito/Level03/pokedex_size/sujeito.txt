@@ -1,0 +1,7 @@
+Assignment name  : pokedex_size
+Expected files   : pokedex_size.c, ft_list.h
+Allowed functions:
+--------------------------------------------------------------------------------
+Retorne a quantidade de elementos de uma lista encadeada.
+typedef struct s_list { struct s_list *next; void *data; } t_list;
+int pokedex_size(t_list *begin_list);

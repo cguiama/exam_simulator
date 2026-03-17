@@ -1,0 +1,5 @@
+Assignment name  : kaio_ken_mult
+Expected files   : kaio_ken_mult.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Gere a tabuada (até 9) do número passado como argumento.

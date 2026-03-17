@@ -1,6 +1,0 @@
-Assignment name  : count_pets
-Expected files   : count_pets.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva um programa que exiba o número de argumentos passados para ele (excluindo o nome do binário).
-Você terá que recriar o putnbr para converter o inteiro da ALU para o buffer ASCII.

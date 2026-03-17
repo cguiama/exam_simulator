@@ -1,0 +1,6 @@
+Assignment name  : kamehameha_expand
+Expected files   : kamehameha_expand.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba uma string e a exiba com exatamente três espaços
+entre as palavras, sem espaços ou tabulações no início ou no fim.

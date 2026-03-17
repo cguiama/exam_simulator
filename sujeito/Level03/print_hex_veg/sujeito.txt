@@ -1,6 +1,0 @@
-Assignment name  : print_hex_veg
-Expected files   : print_hex_veg.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Converta uma string (número base 10 positivo) em sua representação
-Hexadecimal base 16 (letras minúsculas).

@@ -1,0 +1,6 @@
+Assignment name  : fusion_lcm
+Expected files   : fusion_lcm.c
+Allowed functions:
+--------------------------------------------------------------------------------
+Retorne o Mínimo Múltiplo Comum absoluto (LCM) entre dois inteiros sem sinal.
+unsigned int fusion_lcm(unsigned int a, unsigned int b);

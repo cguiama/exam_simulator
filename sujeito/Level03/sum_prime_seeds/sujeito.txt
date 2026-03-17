@@ -1,7 +1,0 @@
-Assignment name  : sum_prime_seeds
-Expected files   : sum_prime_seeds.c
-Allowed functions: write, exit
---------------------------------------------------------------------------------
-Escreva um programa que receba um inteiro positivo e exiba a soma de todos os
-números primos inferiores ou iguais a ele, seguida de um '\n'.
-Se o número de argumentos não for 1, ou se não for um número positivo, exiba apenas 0 e um '\n'.

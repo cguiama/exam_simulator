@@ -1,0 +1,5 @@
+Assignment name  : jedi_pgcd
+Expected files   : jedi_pgcd.c
+Allowed functions: printf, atoi, malloc, free
+--------------------------------------------------------------------------------
+Receba duas strings (representando inteiros), calcule e imprima o Maior Denominador Comum.

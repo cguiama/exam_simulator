@@ -1,6 +1,0 @@
-Assignment name  : pgcd_dog
-Expected files   : pgcd_dog.c
-Allowed functions: printf, atoi, malloc, free
---------------------------------------------------------------------------------
-Receba duas strings (representando inteiros), calcule e imprima o
-Maior Divisor Comum (MDC) em base 10. Algoritmo de Euclides na veia.

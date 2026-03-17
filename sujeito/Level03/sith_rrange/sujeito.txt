@@ -1,0 +1,6 @@
+Assignment name  : sith_rrange
+Expected files   : sith_rrange.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Aloque um array de inteiros e preencha com o intervalo do fim ao início (inclusivo).
+int *sith_rrange(int start, int end);

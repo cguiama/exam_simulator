@@ -1,0 +1,7 @@
+Assignment name  : scouter_base
+Expected files   : scouter_base.c
+Allowed functions: None
+--------------------------------------------------------------------------------
+Escreva uma função que converta a string str (base N <= 16) para inteiro (base 10).
+Os caracteres reconhecidos são: 0123456789abcdef (inclusive maiúsculas).
+int scouter_base(const char *str, int str_base);

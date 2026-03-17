@@ -1,0 +1,6 @@
+Assignment name  : digi_range
+Expected files   : digi_range.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Aloque um array de inteiros e preencha com o intervalo do início ao fim (inclusivo).
+int *digi_range(int start, int end);

@@ -1,0 +1,5 @@
+Assignment name  : tail_whip_cap
+Expected files   : tail_whip_cap.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Transforme em maiúscula a última letra de cada palavra, e o resto minúscula.

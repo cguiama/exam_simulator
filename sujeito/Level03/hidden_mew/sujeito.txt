@@ -1,0 +1,6 @@
+Assignment name  : hidden_mew
+Expected files   : hidden_mew.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Se a primeira string estiver escondida dentro da segunda (respeitando a ordem), imprima 1.
+Caso contrário, imprima 0.

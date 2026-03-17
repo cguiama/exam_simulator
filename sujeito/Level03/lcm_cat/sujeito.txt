@@ -1,7 +1,0 @@
-Assignment name  : lcm_cat
-Expected files   : lcm_cat.c
-Allowed functions:
---------------------------------------------------------------------------------
-Retorne o Mínimo Múltiplo Comum (LCM) entre dois inteiros sem sinal.
-Se qualquer um dos números for 0, retorne 0.
-unsigned int lcm_cat(unsigned int a, unsigned int b);

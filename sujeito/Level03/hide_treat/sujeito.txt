@@ -1,6 +1,0 @@
-Assignment name  : hide_treat
-Expected files   : hide_treat.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Receba duas strings. Se a s1 estiver contida, respeitando a ordem dos caracteres,
-espalhada dentro de s2, imprima 1. Caso contrário, imprima 0.

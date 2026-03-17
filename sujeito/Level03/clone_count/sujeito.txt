@@ -1,0 +1,6 @@
+Assignment name  : clone_count
+Expected files   : clone_count.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que exiba o número de argumentos passados para ele.
+Se não houver argumentos, exiba 0.

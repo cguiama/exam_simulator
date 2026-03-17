@@ -1,0 +1,5 @@
+Assignment name  : force_cap
+Expected files   : force_cap.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Transforme em maiúscula a primeira letra de cada palavra, e o resto minúscula.
