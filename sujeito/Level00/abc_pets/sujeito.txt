@@ -1,6 +1,0 @@
-Assignment name  : abc_pets
-Expected files   : abc_pets.c
-Allowed functions:
---------------------------------------------------------------------------------
-Escreva uma função que receba um ponteiro para um int e defina o valor apontado para 42.
-void abc_pets(int *nbr);

@@ -1,6 +1,0 @@
-Assignment name  : hello_pets
-Expected files   : hello_pets.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva uma função que exiba o alfabeto em letras minúsculas, em uma única linha, em ordem crescente.
-void hello_pets(void);

@@ -2,5 +2,4 @@ Assignment name  : only_zucchini
 Expected files   : only_zucchini.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Escreva uma função que exiba 'N' se o inteiro passado como parâmetro for negativo, ou 'P' se for positivo ou nulo.
-void only_zucchini(int n);
+Escreva um programa que exibe o caractere 'z' na saída padrão seguido de uma nova linha.

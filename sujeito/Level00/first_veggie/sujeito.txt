@@ -2,5 +2,5 @@ Assignment name  : first_veggie
 Expected files   : first_veggie.c
 Allowed functions: write
 --------------------------------------------------------------------------------
-Escreva um programa que exiba seu primeiro argumento na tela, seguido de um '\n'.
-Se não houver argumentos, o programa exibe apenas '\n'.
+Escreva um programa que recebe strings como argumentos e exibe seu primeiro argumento seguido de um \n.
+Se o número de argumentos for menor que 1, o programa exibe \n.

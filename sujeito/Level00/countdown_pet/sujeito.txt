@@ -1,0 +1,5 @@
+Assignment name  : countdown_pet
+Expected files   : countdown_pet.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que exibe todos os dígitos em ordem decrescente, seguido de uma nova linha.

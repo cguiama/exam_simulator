@@ -1,0 +1,6 @@
+Assignment name  : maff_cat
+Expected files   : maff_cat.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que exibe o alfabeto, com as letras de posição par em maiúsculo
+e as letras de posição ímpar em minúsculo, seguido de uma nova linha.

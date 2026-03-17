@@ -1,4 +1,4 @@
 #!/bin/bash
-"$1" "zucchini" "brocolis"
-"$1" "cenoura"
+"$1" "zaz" "mange" "des" "chats"
+"$1" "j'aime le savon"
 "$1"

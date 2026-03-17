@@ -1,6 +1,0 @@
-Assignment name  : jumpy_dog
-Expected files   : jumpy_dog.c
-Allowed functions:
---------------------------------------------------------------------------------
-Escreva uma função que troque o conteúdo de dois inteiros cujos endereços são passados como parâmetros.
-void jumpy_dog(int *a, int *b);
