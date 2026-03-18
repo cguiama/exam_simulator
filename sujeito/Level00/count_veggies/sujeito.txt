@@ -7,4 +7,4 @@ seguido de uma nova linha.
 void count_veggies(void);
 
 Exemplo:
-0123456789EOF
+0123456789
