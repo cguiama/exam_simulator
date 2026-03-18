@@ -1,0 +1,15 @@
+Assignment name  : hello_pets
+Expected files   : hello_pets.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva um programa que exiba "Hello World!" seguido de um \n.
+
+Exemplo:
+
+$>./hello_pets
+Hello World!
+$>./hello_pets | cat -e
+Hello World!$
+$>
+EOF
