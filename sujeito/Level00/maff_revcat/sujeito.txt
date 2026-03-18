@@ -4,3 +4,6 @@ Allowed functions: write
 --------------------------------------------------------------------------------
 Escreva um programa que exibe o alfabeto ao contrário, com as letras de posição par
 em maiúsculo e as letras de posição ímpar em minúsculo, seguido de uma nova linha.
+
+Exemplo:
+zYxWvUtSrQpOnMlKjIhGfEdCbA
