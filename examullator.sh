@@ -38,7 +38,7 @@ for LEVEL in 00 01 02 03 04 05; do
     fi
 
 if [ "$LEVEL" == "00" ]; then
-        NO_ARGS="abc_pets count_veggies hello_pets jumpy_dog moonwalk_dog only_zucchini pet_countdown find_dog"
+        NO_ARGS="find_dog countdown_pet count_veggies hello_pets maff_cat maff_revcat only_zucchini"
         WITH_ARGS="first_veggie last_veggie"
         AVAILABLE_NO_ARGS=$(for ex in $NO_ARGS; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_WITH_ARGS=$(for ex in $WITH_ARGS; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
@@ -47,8 +47,8 @@ if [ "$LEVEL" == "00" ]; then
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "01" ]; then
-        BASE="first_seed bark_meow print_veg strcpy_pet strlen_pet swap_veg repeat_bark rev_veg rotone_pet rot_13_veg search_treat ulstr_pet even_pet putnbr_pet"
-        ADVANCED="last_seed title_pet count_seeds atoi_veg itoa_veg"
+        BASE="first_seed bark_meow print_veg strcpy_pet strlen_pet swap_veg repeat_bark"
+        ADVANCED="rev_veg rot_13_veg rotone_pet strcmp_pet search_treat ulstr_pet"
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
@@ -56,8 +56,8 @@ if [ "$LEVEL" == "00" ]; then
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "02" ]; then
-        BASE="print_paws swap_paws rev_paws strrev_veg mirror_pet strcmp_pet max_pet power_of_cat"
-        ADVANCED="inter_veg union_veg seed_match last_bite strdup_veg calc_pet"
+        BASE="mirror_mon atoi_dbz calc_force strcmp_sith strdup_clone strrev_jedi inter_dex"
+        ADVANCED="last_jedi max_power is_power_of_ssj print_scouter rev_scouter swap_scouter union_fusion digi_match"
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
@@ -65,8 +65,8 @@ if [ "$LEVEL" == "00" ]; then
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "03" ]; then
-        BASE="sum_prime_seeds clean_fur stretch_leash count_pets hide_treat lcm_cat pgcd_dog print_hex_veg rstr_cap_pet str_cap_pet mult_treats"
-        ADVANCED="rrange_veg range_veg pack_size"
+        BASE="senzu_sum jedi_clean kamehameha_expand scouter_base pokedex_size digi_range sith_rrange"
+        ADVANCED="hidden_mew fusion_lcm clone_count jedi_pgcd hex_saber tail_whip_cap force_cap kaio_ken_mult"
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
@@ -74,8 +74,8 @@ if [ "$LEVEL" == "00" ]; then
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "04" ]; then
-        BASE="fprime_seed itoa_pet rev_bark rostring_pet sort_veggies"
-        ADVANCED="brain_pug catch_mouse water_crops itoa_base_veg walk_pack vet_visit split_veg sort_pack"
+        BASE="jedi_mind_trick sith_checkmate water_gun_fill saiyan_prime pokedex_itoa scouter_itoa_base"
+        ADVANCED="force_foreach order66_remove destructo_split yoda_rev_wstr force_push_rotate radar_sort archive_sort_list"
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
@@ -83,8 +83,8 @@ if [ "$LEVEL" == "00" ]; then
         EXERCISES=$(echo -e "$PART_1\n$PART_2" | grep -v '^$')
 
     elif [ "$LEVEL" == "05" ]; then
-        BASE="biggest_paw veg_options"
-        ADVANCED="cage_match chase_tail print_vet_meds rpn_dog"
+        BASE="biggest_shenron capsule_brackets time_loop_sith"
+        ADVANCED="pokedex_flags digicore_dump jedi_rpn"
         AVAILABLE_BASE=$(for ex in $BASE; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         AVAILABLE_ADV=$(for ex in $ADVANCED; do [ -d "$LEVEL_DIR/$ex" ] && echo "$LEVEL_DIR/$ex"; done)
         PART_1=$(sort_by_history "$AVAILABLE_BASE" 3)
