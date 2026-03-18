@@ -1,11 +1,1 @@
 0123456789EOF
-
-# ==========================================
-# 6. hello_pets (hello) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/hello_pets/sujeito.txt"
-Assignment name  : hello_pets
-Expected files   : hello_pets.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva um programa que exibe "Hello World!" seguido de um \n.
