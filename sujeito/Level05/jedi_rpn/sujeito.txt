@@ -1,0 +1,5 @@
+Assignment name  : jedi_rpn
+Expected files   : *.c, *.h
+Allowed functions: atoi, printf, write, malloc, free
+--------------------------------------------------------------------------------
+Calcule uma equação escrita em Notação Polonesa Reversa (RPN).

@@ -1,8 +1,0 @@
-Assignment name  : chase_tail
-Expected files   : chase_tail.c
-Allowed functions:
---------------------------------------------------------------------------------
-Escreva uma função que detecte se há um ciclo (loop infinito) em uma lista encadeada.
-Retorne 1 se houver ciclo, 0 se não houver. Use o Algoritmo da Lebre e Tartaruga.
-typedef struct s_list { const void *data; struct s_list *next; } t_list;
-int chase_tail(const t_list *list);

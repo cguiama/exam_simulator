@@ -1,0 +1,7 @@
+Assignment name  : digicore_dump
+Expected files   : digicore_dump.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva uma função que receba um endereço de memória e seu tamanho, e imprima
+seu conteúdo no formato de Hex Dump.
+void print_memory(const void *addr, size_t size);

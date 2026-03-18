@@ -1,0 +1,6 @@
+Assignment name  : pokedex_flags
+Expected files   : *.c *.h
+Allowed functions: write
+--------------------------------------------------------------------------------
+Capture os argumentos que começam com '-' e ative os bits correspondentes num int.
+Exiba-os em blocos de 8 bits.

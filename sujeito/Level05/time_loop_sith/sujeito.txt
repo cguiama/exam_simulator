@@ -1,0 +1,6 @@
+Assignment name  : time_loop_sith
+Expected files   : time_loop_sith.c
+Allowed functions: malloc, free
+--------------------------------------------------------------------------------
+Retorne 1 se detectar um ciclo na lista encadeada, caso contrário retorne 0.
+int time_loop_sith(const t_list *list);

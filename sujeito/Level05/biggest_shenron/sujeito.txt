@@ -1,0 +1,6 @@
+Assignment name  : biggest_shenron
+Expected files   : *.c, *.h
+Allowed functions: write
+--------------------------------------------------------------------------------
+Escreva um programa que receba uma string e exiba o maior palíndromo contido nela.
+Se houver dois do mesmo tamanho, imprima o último.

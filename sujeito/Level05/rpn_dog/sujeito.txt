@@ -1,7 +1,0 @@
-Assignment name  : rpn_dog
-Expected files   : rpn_dog.c
-Allowed functions: atoi, printf, write, malloc, free
---------------------------------------------------------------------------------
-Escreva um programa que avalie uma string com uma equação em Notação Polonesa Reversa (RPN).
-Operadores válidos: +, -, *, /, %.
-Se a string for inválida ou tentar divisão por zero, exiba "Error".

@@ -1,0 +1,6 @@
+Assignment name  : capsule_brackets
+Expected files   : *.c *.h
+Allowed functions: write
+--------------------------------------------------------------------------------
+Verifique se a string passada como argumento tem os colchetes (), [], {} fechados na ordem correta.
+Se sim, imprima "OK". Se não, imprima "Error".

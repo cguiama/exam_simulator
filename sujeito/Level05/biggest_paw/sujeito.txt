@@ -1,7 +1,0 @@
-Assignment name  : biggest_paw
-Expected files   : biggest_paw.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Escreva um programa que receba uma string e imprima o maior palíndromo contido nela.
-Se houver empate, imprima o que aparece por último.
-Um palíndromo é uma sequência de caracteres que é lida da mesma forma de trás para frente.
