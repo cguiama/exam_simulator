@@ -1,7 +1,0 @@
-Assignment name  : itoa_base_veg
-Expected files   : itoa_base_veg.c
-Allowed functions: malloc
---------------------------------------------------------------------------------
-Converte um int para uma string representando-o em uma base entre 2 e 16.
-Hexadecimais devem ser impressos em letras MAIÚSCULAS.
-char *itoa_base_veg(int value, int base);

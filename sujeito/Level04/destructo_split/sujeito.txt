@@ -1,0 +1,6 @@
+Assignment name  : destructo_split
+Expected files   : destructo_split.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Fatie uma string em palavras separadas por espaços/tabs/newlines, retornando um array nulo-terminado.
+char **destructo_split(char *str);

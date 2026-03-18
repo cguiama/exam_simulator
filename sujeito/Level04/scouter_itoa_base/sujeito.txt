@@ -1,0 +1,8 @@
+Assignment name  : scouter_itoa_base
+Expected files   : scouter_itoa_base.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Converta um int em string alocada (base 2 a 16).
+Se base 10 e valor negativo, inclua o sinal '-'. Qualquer outra base é tratada como unsigned.
+Base 16 usa "0123456789ABCDEF".
+char *scouter_itoa_base(int value, int base);

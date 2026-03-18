@@ -1,0 +1,6 @@
+Assignment name  : pokedex_itoa
+Expected files   : pokedex_itoa.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Converta um int em uma string alocada dinamicamente com terminação nula.
+char *pokedex_itoa(int nbr);

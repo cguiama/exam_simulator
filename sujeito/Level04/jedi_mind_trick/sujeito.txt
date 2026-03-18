@@ -1,0 +1,7 @@
+Assignment name  : jedi_mind_trick
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+Escreva um interpretador da linguagem minimalista Brainfuck.
+A memória consiste em um array de 2048 bytes inicializado com zeros e um ponteiro.
+Comandos: > < + - . [ ]

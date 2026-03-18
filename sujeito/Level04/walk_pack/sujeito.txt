@@ -1,6 +1,0 @@
-Assignment name  : walk_pack
-Expected files   : walk_pack.c
-Allowed functions:
---------------------------------------------------------------------------------
-Aplique a função 'f' recebida como parâmetro aos dados de todos os nós da lista.
-void walk_pack(t_list *begin_list, void (*f)(void *));

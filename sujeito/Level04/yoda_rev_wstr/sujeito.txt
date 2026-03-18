@@ -1,0 +1,5 @@
+Assignment name  : yoda_rev_wstr
+Expected files   : yoda_rev_wstr.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+Exiba as palavras de uma string na ordem inversa, separadas por exatamente um espaço.

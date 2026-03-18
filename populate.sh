@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SUJEITO_DIR="./sujeito/Level03"
-TESTES_DIR="./testes/Level03"
+SUJEITO_DIR="./sujeito/Level04"
+TESTES_DIR="./testes/Level04"
 
-EXERCISES="senzu_sum jedi_clean kamehameha_expand scouter_base pokedex_size digi_range sith_rrange hidden_mew fusion_lcm clone_count jedi_pgcd hex_saber tail_whip_cap force_cap kaio_ken_mult"
+EXERCISES="jedi_mind_trick sith_checkmate water_gun_fill saiyan_prime pokedex_itoa scouter_itoa_base force_foreach order66_remove destructo_split yoda_rev_wstr force_push_rotate radar_sort archive_sort_list"
 
 rm -rf "$SUJEITO_DIR" "$TESTES_DIR"
 
@@ -13,415 +13,406 @@ for ex in $EXERCISES; do
 done
 
 # ==========================================
-# 1. senzu_sum (add_prime_sum) -> Program
+# 1. jedi_mind_trick (brainfuck) -> Program
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/senzu_sum/sujeito.txt"
-Assignment name  : senzu_sum
-Expected files   : senzu_sum.c
-Allowed functions: write, exit
+cat << 'EOF' > "$SUJEITO_DIR/jedi_mind_trick/sujeito.txt"
+Assignment name  : jedi_mind_trick
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
-Escreva um programa que receba um inteiro positivo e exiba a soma de todos os
-números primos inferiores ou iguais a ele, seguida de um '\n'.
-Se o número de argumentos não for 1, ou se não for um número positivo, exiba apenas 0 e um '\n'.
+Escreva um interpretador da linguagem minimalista Brainfuck.
+A memória consiste em um array de 2048 bytes inicializado com zeros e um ponteiro.
+Comandos: > < + - . [ ]
 EOF
-cat << 'EOF' > "$TESTES_DIR/senzu_sum/run_test.sh"
+cat << 'EOF' > "$TESTES_DIR/jedi_mind_trick/run_test.sh"
 #!/bin/bash
-"$1" "5"
-"$1" "7"
-"$1" "9"
-"$1" "0"
+"$1" "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+"$1" "+++++[>++++[>++++H>+++++i<<-]>>>++\n<<<<-]>>--------.>+++++.>."
 "$1" ""
 EOF
-cat << 'EOF' > "$TESTES_DIR/senzu_sum/expected.txt"
-10
-17
-17
-0
-0
+cat << 'EOF' > "$TESTES_DIR/jedi_mind_trick/expected.txt"
+Hello World!
+Hi
+
 EOF
-chmod +x "$TESTES_DIR/senzu_sum/run_test.sh"
+chmod +x "$TESTES_DIR/jedi_mind_trick/run_test.sh"
 
 # ==========================================
-# 2. jedi_clean (epur_str) -> Program
+# 2. sith_checkmate (checkmate) -> Program
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/jedi_clean/sujeito.txt"
-Assignment name  : jedi_clean
-Expected files   : jedi_clean.c
-Allowed functions: write
+cat << 'EOF' > "$SUJEITO_DIR/sith_checkmate/sujeito.txt"
+Assignment name  : sith_checkmate
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
-Escreva um programa que receba uma string e a exiba com exatamente um espaço
-entre as palavras, sem espaços ou tabulações no início ou no fim.
-Se o número de parâmetros não for 1, o programa exibe \n.
+Receba linhas representando um tabuleiro de xadrez (Rei 'K', Peão 'P', Bispo 'B', Torre 'R', Rainha 'Q').
+Imprima "Success" se o Rei estiver em xeque, caso contrário "Fail".
 EOF
-cat << 'EOF' > "$TESTES_DIR/jedi_clean/run_test.sh"
+cat << 'EOF' > "$TESTES_DIR/sith_checkmate/run_test.sh"
 #!/bin/bash
-"$1" "vous voyez c'est facile d'afficher la meme chose"
-"$1" " seulement          la c'est      plus dur "
-"$1" "comme c'est cocasse" "vous avez entendu, Mathilde ?"
-"$1" ""
+"$1" ".." ".K"
+"$1" "R..." ".K.." "..P." "...."
+"$1" "R..." "iheK" "...." "jeiR"
+"$1"
 EOF
-cat << 'EOF' > "$TESTES_DIR/jedi_clean/expected.txt"
-vous voyez c'est facile d'afficher la meme chose
-seulement la c'est plus dur
-
+cat << 'EOF' > "$TESTES_DIR/sith_checkmate/expected.txt"
+Fail
+Success
+Success
 
 EOF
-chmod +x "$TESTES_DIR/jedi_clean/run_test.sh"
+chmod +x "$TESTES_DIR/sith_checkmate/run_test.sh"
 
 # ==========================================
-# 3. kamehameha_expand (expand_str) -> Program
+# 3. water_gun_fill (flood_fill) -> Function
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/kamehameha_expand/sujeito.txt"
-Assignment name  : kamehameha_expand
-Expected files   : kamehameha_expand.c
-Allowed functions: write
+cat << 'EOF' > "$SUJEITO_DIR/water_gun_fill/sujeito.txt"
+Assignment name  : water_gun_fill
+Expected files   : *.c, *.h
+Allowed functions: -
 --------------------------------------------------------------------------------
-Escreva um programa que receba uma string e a exiba com exatamente três espaços
-entre as palavras, sem espaços ou tabulações no início ou no fim.
+Escreva uma função que receba uma matriz 2D (char **), suas dimensões e um ponto de início.
+Ela deve preencher recursivamente a área delimitada usando o caractere 'F'.
+void flood_fill(char **tab, t_point size, t_point begin);
 EOF
-cat << 'EOF' > "$TESTES_DIR/kamehameha_expand/run_test.sh"
-#!/bin/bash
-"$1" "vous   voyez   c'est   facile   d'afficher   la   meme   chose"
-"$1" " seulement          la c'est      plus dur "
-"$1" "comme c'est cocasse" "vous avez entendu, Mathilde ?"
-"$1" ""
+cat << 'EOF' > "$TESTES_DIR/water_gun_fill/t_point.h"
+#ifndef T_POINT_H
+#define T_POINT_H
+typedef struct s_point { int x; int y; } t_point;
+#endif
 EOF
-cat << 'EOF' > "$TESTES_DIR/kamehameha_expand/expected.txt"
-vous   voyez   c'est   facile   d'afficher   la   meme   chose
-seulement   la   c'est   plus   dur
-
-
-EOF
-chmod +x "$TESTES_DIR/kamehameha_expand/run_test.sh"
-
-# ==========================================
-# 4. scouter_base (ft_atoi_base) -> Function
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/scouter_base/sujeito.txt"
-Assignment name  : scouter_base
-Expected files   : scouter_base.c
-Allowed functions: None
---------------------------------------------------------------------------------
-Escreva uma função que converta a string str (base N <= 16) para inteiro (base 10).
-Os caracteres reconhecidos são: 0123456789abcdef (inclusive maiúsculas).
-int scouter_base(const char *str, int str_base);
-EOF
-cat << 'EOF' > "$TESTES_DIR/scouter_base/main.c"
+cat << 'EOF' > "$TESTES_DIR/water_gun_fill/main.c"
 #include <stdio.h>
-int scouter_base(const char *str, int str_base);
+#include <stdlib.h>
+#include <string.h>
+#include "t_point.h"
+void flood_fill(char **tab, t_point size, t_point begin);
 int main(void) {
-    printf("%d\n", scouter_base("12FDB3", 16));
-    printf("%d\n", scouter_base("101", 2));
-    printf("%d\n", scouter_base("-2A", 16));
+    char *zone[] = { strdup("11111111"), strdup("10001001"), strdup("10010001"), strdup("10110001"), strdup("11100001") };
+    t_point size = {8, 5}; t_point begin = {2, 2};
+    flood_fill(zone, size, begin);
+    for (int i = 0; i < 5; i++) { printf("%s\n", zone[i]); free(zone[i]); }
     return 0;
 }
 EOF
-cat << 'EOF' > "$TESTES_DIR/scouter_base/expected.txt"
-1244595
-5
+cat << 'EOF' > "$TESTES_DIR/water_gun_fill/expected.txt"
+11111111
+1FFF1001
+1FF10001
+1F110001
+11100001
+EOF
+
+# ==========================================
+# 4. saiyan_prime (fprime) -> Program
+# ==========================================
+cat << 'EOF' > "$SUJEITO_DIR/saiyan_prime/sujeito.txt"
+Assignment name  : saiyan_prime
+Expected files   : saiyan_prime.c
+Allowed functions: printf, atoi
+--------------------------------------------------------------------------------
+Escreva um programa que receba um int positivo e exiba seus fatores primos separados por '*'.
+EOF
+cat << 'EOF' > "$TESTES_DIR/saiyan_prime/run_test.sh"
+#!/bin/bash
+"$1" "225225"
+"$1" "8333325"
+"$1" "42"
+"$1" "1"
+"$1"
+EOF
+cat << 'EOF' > "$TESTES_DIR/saiyan_prime/expected.txt"
+3*3*5*5*7*11*13
+3*3*5*5*7*11*13*37
+2*3*7
+1
+
+EOF
+chmod +x "$TESTES_DIR/saiyan_prime/run_test.sh"
+
+# ==========================================
+# 5. pokedex_itoa (ft_itoa) -> Function
+# ==========================================
+cat << 'EOF' > "$SUJEITO_DIR/pokedex_itoa/sujeito.txt"
+Assignment name  : pokedex_itoa
+Expected files   : pokedex_itoa.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Converta um int em uma string alocada dinamicamente com terminação nula.
+char *pokedex_itoa(int nbr);
+EOF
+cat << 'EOF' > "$TESTES_DIR/pokedex_itoa/main.c"
+#include <stdio.h>
+#include <stdlib.h>
+char *pokedex_itoa(int nbr);
+int main(void) {
+    char *s1 = pokedex_itoa(-2147483648);
+    char *s2 = pokedex_itoa(42);
+    char *s3 = pokedex_itoa(0);
+    printf("%s\n%s\n%s\n", s1, s2, s3);
+    free(s1); free(s2); free(s3);
+    return 0;
+}
+EOF
+cat << 'EOF' > "$TESTES_DIR/pokedex_itoa/expected.txt"
+-2147483648
+42
+0
+EOF
+
+# ==========================================
+# 6. scouter_itoa_base (ft_itoa_base) -> Function
+# ==========================================
+cat << 'EOF' > "$SUJEITO_DIR/scouter_itoa_base/sujeito.txt"
+Assignment name  : scouter_itoa_base
+Expected files   : scouter_itoa_base.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Converta um int em string alocada (base 2 a 16).
+Se base 10 e valor negativo, inclua o sinal '-'. Qualquer outra base é tratada como unsigned.
+Base 16 usa "0123456789ABCDEF".
+char *scouter_itoa_base(int value, int base);
+EOF
+cat << 'EOF' > "$TESTES_DIR/scouter_itoa_base/main.c"
+#include <stdio.h>
+#include <stdlib.h>
+char *scouter_itoa_base(int value, int base);
+int main(void) {
+    char *s1 = scouter_itoa_base(255, 16);
+    char *s2 = scouter_itoa_base(-42, 10);
+    printf("%s\n%s\n", s1, s2);
+    free(s1); free(s2);
+    return 0;
+}
+EOF
+cat << 'EOF' > "$TESTES_DIR/scouter_itoa_base/expected.txt"
+FF
 -42
 EOF
 
 # ==========================================
-# 5. pokedex_size (ft_list_size) -> Function
+# 7. force_foreach (ft_list_foreach) -> Function
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/pokedex_size/sujeito.txt"
-Assignment name  : pokedex_size
-Expected files   : pokedex_size.c, ft_list.h
+cat << 'EOF' > "$SUJEITO_DIR/force_foreach/sujeito.txt"
+Assignment name  : force_foreach
+Expected files   : force_foreach.c, ft_list.h
 Allowed functions:
 --------------------------------------------------------------------------------
-Retorne a quantidade de elementos de uma lista encadeada.
-typedef struct s_list { struct s_list *next; void *data; } t_list;
-int pokedex_size(t_list *begin_list);
+Aplique a função 'f' recebida como parâmetro aos dados de todos os nós da lista.
+void force_foreach(t_list *begin_list, void (*f)(void *));
 EOF
-cat << 'EOF' > "$TESTES_DIR/pokedex_size/main.c"
+cat << 'EOF' > "$TESTES_DIR/force_foreach/ft_list.h"
+#ifndef FT_LIST_H
+#define FT_LIST_H
+typedef struct s_list { struct s_list *next; void *data; } t_list;
+#endif
+EOF
+cat << 'EOF' > "$TESTES_DIR/force_foreach/main.c"
 #include <stdio.h>
 #include <stdlib.h>
-typedef struct s_list { struct s_list *next; void *data; } t_list;
-int pokedex_size(t_list *begin_list);
+#include "ft_list.h"
+void force_foreach(t_list *begin_list, void (*f)(void *));
+void print_data(void *data) { printf("%s ", (char *)data); }
 int main(void) {
-    t_list *head = malloc(sizeof(t_list));
-    head->next = malloc(sizeof(t_list));
-    head->next->next = NULL;
-    printf("%d\n", pokedex_size(head));
-    free(head->next); free(head);
-    printf("%d\n", pokedex_size(NULL));
+    t_list *node = malloc(sizeof(t_list)); node->data = "Luke";
+    node->next = malloc(sizeof(t_list)); node->next->data = "Leia";
+    node->next->next = NULL;
+    force_foreach(node, print_data);
+    printf("\n");
+    free(node->next); free(node);
     return 0;
 }
 EOF
-cat << 'EOF' > "$TESTES_DIR/pokedex_size/expected.txt"
-2
-0
+cat << 'EOF' > "$TESTES_DIR/force_foreach/expected.txt"
+Luke Leia
 EOF
 
 # ==========================================
-# 6. digi_range (ft_range) -> Function
+# 8. order66_remove (ft_list_remove_if) -> Function
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/digi_range/sujeito.txt"
-Assignment name  : digi_range
-Expected files   : digi_range.c
-Allowed functions: malloc
+cat << 'EOF' > "$SUJEITO_DIR/order66_remove/sujeito.txt"
+Assignment name  : order66_remove
+Expected files   : order66_remove.c, ft_list.h
+Allowed functions: free
 --------------------------------------------------------------------------------
-Aloque um array de inteiros e preencha com o intervalo do início ao fim (inclusivo).
-int *digi_range(int start, int end);
+Remova os nós da lista se a função 'cmp' retornar 0 ao comparar seus dados com 'data_ref'.
+void order66_remove(t_list **begin_list, void *data_ref, int (*cmp)());
 EOF
-cat << 'EOF' > "$TESTES_DIR/digi_range/main.c"
+cat << 'EOF' > "$TESTES_DIR/order66_remove/ft_list.h"
+#ifndef FT_LIST_H
+#define FT_LIST_H
+typedef struct s_list { struct s_list *next; void *data; } t_list;
+#endif
+EOF
+cat << 'EOF' > "$TESTES_DIR/order66_remove/main.c"
 #include <stdio.h>
 #include <stdlib.h>
-int *digi_range(int start, int end);
+#include <string.h>
+#include "ft_list.h"
+void order66_remove(t_list **begin_list, void *data_ref, int (*cmp)());
+int cmp(void *a, void *b) { return strcmp((char*)a, (char*)b); }
 int main(void) {
-    int *arr = digi_range(-1, 2);
-    for(int i=0; i<4; i++) printf("%d ", arr[i]);
+    t_list *head = malloc(sizeof(t_list)); head->data = "Jedi";
+    head->next = malloc(sizeof(t_list)); head->next->data = "Sith";
+    head->next->next = malloc(sizeof(t_list)); head->next->next->data = "Jedi";
+    head->next->next->next = NULL;
+    order66_remove(&head, "Jedi", cmp);
+    for(t_list *tmp = head; tmp; tmp = tmp->next) printf("%s ", (char*)tmp->data);
     printf("\n");
+    free(head); // Limpa o Sith que sobrou
+    return 0;
+}
+EOF
+cat << 'EOF' > "$TESTES_DIR/order66_remove/expected.txt"
+Sith
+EOF
+
+# ==========================================
+# 9. destructo_split (ft_split) -> Function
+# ==========================================
+cat << 'EOF' > "$SUJEITO_DIR/destructo_split/sujeito.txt"
+Assignment name  : destructo_split
+Expected files   : destructo_split.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
+Fatie uma string em palavras separadas por espaços/tabs/newlines, retornando um array nulo-terminado.
+char **destructo_split(char *str);
+EOF
+cat << 'EOF' > "$TESTES_DIR/destructo_split/main.c"
+#include <stdio.h>
+#include <stdlib.h>
+char **destructo_split(char *str);
+int main(void) {
+    char **arr = destructo_split("   Kuririn   Goku Vegeta  ");
+    for(int i = 0; arr[i] != NULL; i++) {
+        printf("%s\n", arr[i]);
+        free(arr[i]);
+    }
     free(arr);
     return 0;
 }
 EOF
-cat << 'EOF' > "$TESTES_DIR/digi_range/expected.txt"
--1 0 1 2
+cat << 'EOF' > "$TESTES_DIR/destructo_split/expected.txt"
+Kuririn
+Goku
+Vegeta
 EOF
 
 # ==========================================
-# 7. sith_rrange (ft_rrange) -> Function
+# 10. yoda_rev_wstr (rev_wstr) -> Program
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/sith_rrange/sujeito.txt"
-Assignment name  : sith_rrange
-Expected files   : sith_rrange.c
-Allowed functions: malloc
+cat << 'EOF' > "$SUJEITO_DIR/yoda_rev_wstr/sujeito.txt"
+Assignment name  : yoda_rev_wstr
+Expected files   : yoda_rev_wstr.c
+Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
-Aloque um array de inteiros e preencha com o intervalo do fim ao início (inclusivo).
-int *sith_rrange(int start, int end);
+Exiba as palavras de uma string na ordem inversa, separadas por exatamente um espaço.
 EOF
-cat << 'EOF' > "$TESTES_DIR/sith_rrange/main.c"
-#include <stdio.h>
-#include <stdlib.h>
-int *sith_rrange(int start, int end);
-int main(void) {
-    int *arr = sith_rrange(1, 3);
-    for(int i=0; i<3; i++) printf("%d ", arr[i]);
-    printf("\n");
-    free(arr);
-    return 0;
-}
-EOF
-cat << 'EOF' > "$TESTES_DIR/sith_rrange/expected.txt"
-3 2 1
-EOF
-
-# ==========================================
-# 8. hidden_mew (hidenp) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/hidden_mew/sujeito.txt"
-Assignment name  : hidden_mew
-Expected files   : hidden_mew.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Se a primeira string estiver escondida dentro da segunda (respeitando a ordem), imprima 1.
-Caso contrário, imprima 0.
-EOF
-cat << 'EOF' > "$TESTES_DIR/hidden_mew/run_test.sh"
+cat << 'EOF' > "$TESTES_DIR/yoda_rev_wstr/run_test.sh"
 #!/bin/bash
-"$1" "fgex.;" "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6"
-"$1" "abc" "2altrb53c.sse"
-"$1" "abc" "btarc"
+"$1" "le temps du mepris precede celui de l'indifference"
+"$1" "abcdefghijklm"
+"$1" "il contempla le mont"
 "$1"
 EOF
-cat << 'EOF' > "$TESTES_DIR/hidden_mew/expected.txt"
-1
-1
-0
+cat << 'EOF' > "$TESTES_DIR/yoda_rev_wstr/expected.txt"
+l'indifference de celui precede mepris du temps le
+abcdefghijklm
+mont le contempla il
 
 EOF
-chmod +x "$TESTES_DIR/hidden_mew/run_test.sh"
+chmod +x "$TESTES_DIR/yoda_rev_wstr/run_test.sh"
 
 # ==========================================
-# 9. fusion_lcm (lcm) -> Function
+# 11. force_push_rotate (rostring) -> Program
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/fusion_lcm/sujeito.txt"
-Assignment name  : fusion_lcm
-Expected files   : fusion_lcm.c
+cat << 'EOF' > "$SUJEITO_DIR/force_push_rotate/sujeito.txt"
+Assignment name  : force_push_rotate
+Expected files   : force_push_rotate.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+Escreva um programa que rotacione uma string empurrando a primeira palavra para o final.
+As palavras devem ser separadas por exatamente um espaço.
+EOF
+cat << 'EOF' > "$TESTES_DIR/force_push_rotate/run_test.sh"
+#!/bin/bash
+"$1" "abc   "
+"$1" "Que la      lumiere soit et la lumiere fut"
+"$1" "     AkjhZ zLKIJz , 23y"
+"$1"
+EOF
+cat << 'EOF' > "$TESTES_DIR/force_push_rotate/expected.txt"
+abc
+la lumiere soit et la lumiere fut Que
+zLKIJz , 23y AkjhZ
+
+EOF
+chmod +x "$TESTES_DIR/force_push_rotate/run_test.sh"
+
+# ==========================================
+# 12. radar_sort (sort_int_tab) -> Function
+# ==========================================
+cat << 'EOF' > "$SUJEITO_DIR/radar_sort/sujeito.txt"
+Assignment name  : radar_sort
+Expected files   : radar_sort.c
 Allowed functions:
 --------------------------------------------------------------------------------
-Retorne o Mínimo Múltiplo Comum absoluto (LCM) entre dois inteiros sem sinal.
-unsigned int fusion_lcm(unsigned int a, unsigned int b);
+Ordene um array de inteiros em ordem crescente (in-place). Preservando duplicatas.
+void radar_sort(int *tab, unsigned int size);
 EOF
-cat << 'EOF' > "$TESTES_DIR/fusion_lcm/main.c"
+cat << 'EOF' > "$TESTES_DIR/radar_sort/main.c"
 #include <stdio.h>
-unsigned int fusion_lcm(unsigned int a, unsigned int b);
+void radar_sort(int *tab, unsigned int size);
 int main(void) {
-    printf("%u\n", fusion_lcm(15, 20));
-    printf("%u\n", fusion_lcm(0, 5));
+    int tab[] = {5, -4, 3, -2, 1, 3};
+    radar_sort(tab, 6);
+    for(int i=0; i<6; i++) printf("%d ", tab[i]);
+    printf("\n");
     return 0;
 }
 EOF
-cat << 'EOF' > "$TESTES_DIR/fusion_lcm/expected.txt"
-60
-0
+cat << 'EOF' > "$TESTES_DIR/radar_sort/expected.txt"
+-4 -2 1 3 3 5
 EOF
 
 # ==========================================
-# 10. clone_count (paramsum) -> Program
+# 13. archive_sort_list (sort_list) -> Function
 # ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/clone_count/sujeito.txt"
-Assignment name  : clone_count
-Expected files   : clone_count.c
-Allowed functions: write
+cat << 'EOF' > "$SUJEITO_DIR/archive_sort_list/sujeito.txt"
+Assignment name  : archive_sort_list
+Expected files   : archive_sort_list.c, list.h
+Allowed functions:
 --------------------------------------------------------------------------------
-Escreva um programa que exiba o número de argumentos passados para ele.
-Se não houver argumentos, exiba 0.
+Ordene uma lista encadeada usando a função de comparação passada por ponteiro (que retorna true/false).
+O retorno é o ponteiro para o novo head da lista.
+t_list *archive_sort_list(t_list* lst, int (*cmp)(int, int));
 EOF
-cat << 'EOF' > "$TESTES_DIR/clone_count/run_test.sh"
-#!/bin/bash
-"$1" 1 2 3 5 7 24
-"$1" 6 12 24
-"$1"
+cat << 'EOF' > "$TESTES_DIR/archive_sort_list/list.h"
+#ifndef LIST_H
+#define LIST_H
+typedef struct s_list { struct s_list *next; int data; } t_list;
+#endif
 EOF
-cat << 'EOF' > "$TESTES_DIR/clone_count/expected.txt"
-6
-3
-0
+cat << 'EOF' > "$TESTES_DIR/archive_sort_list/main.c"
+#include <stdio.h>
+#include <stdlib.h>
+#include "list.h"
+t_list *archive_sort_list(t_list *lst, int (*cmp)(int, int));
+int cmp(int a, int b) { return a <= b; }
+int main(void) {
+    t_list *node1 = malloc(sizeof(t_list)); node1->data = 9001;
+    t_list *node2 = malloc(sizeof(t_list)); node2->data = 42;
+    t_list *node3 = malloc(sizeof(t_list)); node3->data = 10;
+    node1->next = node2; node2->next = node3; node3->next = NULL;
+    t_list *sorted = archive_sort_list(node1, cmp);
+    for(t_list *t = sorted; t; t = t->next) printf("%d ", t->data);
+    printf("\n");
+    free(node1); free(node2); free(node3);
+    return 0;
+}
 EOF
-chmod +x "$TESTES_DIR/clone_count/run_test.sh"
+cat << 'EOF' > "$TESTES_DIR/archive_sort_list/expected.txt"
+10 42 9001
+EOF
 
-# ==========================================
-# 11. jedi_pgcd (pgcd) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/jedi_pgcd/sujeito.txt"
-Assignment name  : jedi_pgcd
-Expected files   : jedi_pgcd.c
-Allowed functions: printf, atoi, malloc, free
---------------------------------------------------------------------------------
-Receba duas strings (representando inteiros), calcule e imprima o Maior Denominador Comum.
-EOF
-cat << 'EOF' > "$TESTES_DIR/jedi_pgcd/run_test.sh"
-#!/bin/bash
-"$1" "42" "10"
-"$1" "42" "12"
-"$1" "14" "77"
-"$1" "17" "3"
-"$1"
-EOF
-cat << 'EOF' > "$TESTES_DIR/jedi_pgcd/expected.txt"
-2
-6
-7
-1
-
-EOF
-chmod +x "$TESTES_DIR/jedi_pgcd/run_test.sh"
-
-# ==========================================
-# 12. hex_saber (print_hex) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/hex_saber/sujeito.txt"
-Assignment name  : hex_saber
-Expected files   : hex_saber.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Converta uma string (número base 10 positivo) em sua representação Hexadecimal (letras minúsculas).
-EOF
-cat << 'EOF' > "$TESTES_DIR/hex_saber/run_test.sh"
-#!/bin/bash
-"$1" "10"
-"$1" "255"
-"$1" "5156454"
-"$1"
-EOF
-cat << 'EOF' > "$TESTES_DIR/hex_saber/expected.txt"
-a
-ff
-4eae66
-
-EOF
-chmod +x "$TESTES_DIR/hex_saber/run_test.sh"
-
-# ==========================================
-# 13. tail_whip_cap (rstr_capitalizer) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/tail_whip_cap/sujeito.txt"
-Assignment name  : tail_whip_cap
-Expected files   : tail_whip_cap.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Transforme em maiúscula a última letra de cada palavra, e o resto minúscula.
-EOF
-cat << 'EOF' > "$TESTES_DIR/tail_whip_cap/run_test.sh"
-#!/bin/bash
-"$1"
-"$1" "Premier PETIT TesT"
-"$1" "DeuxiEmE tEST uN PEU moinS  facile" "   attention C'EST pas dur QUAND mEmE" "ALLer UN DeRNier 0123456789pour LA rouTE    E "
-EOF
-cat << 'EOF' > "$TESTES_DIR/tail_whip_cap/expected.txt"
-
-premieR petiT tesT
-deuxiemE tesT uN peU moinS  facilE
-   attentioN c'esT paS duR quanD memE
-alleR uN dernieR 0123456789pouR lA routE    E
-EOF
-chmod +x "$TESTES_DIR/tail_whip_cap/run_test.sh"
-
-# ==========================================
-# 14. force_cap (str_capitalizer) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/force_cap/sujeito.txt"
-Assignment name  : force_cap
-Expected files   : force_cap.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Transforme em maiúscula a primeira letra de cada palavra, e o resto minúscula.
-EOF
-cat << 'EOF' > "$TESTES_DIR/force_cap/run_test.sh"
-#!/bin/bash
-"$1"
-"$1" "Premier PETIT TesT"
-"$1" "DeuxiEmE tEST uN PEU moinS  facile" "   attention C'EST pas dur QUAND mEmE" "ALLer UN DeRNier 0123456789pour LA rouTE    E "
-EOF
-cat << 'EOF' > "$TESTES_DIR/force_cap/expected.txt"
-
-Premier Petit Test
-Deuxieme Test Un Peu Moins  Facile
-   Attention C'est Pas Dur Quand Meme
-Aller Un Dernier 0123456789pour La Route    E
-EOF
-chmod +x "$TESTES_DIR/force_cap/run_test.sh"
-
-# ==========================================
-# 15. kaio_ken_mult (tab_mult) -> Program
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/kaio_ken_mult/sujeito.txt"
-Assignment name  : kaio_ken_mult
-Expected files   : kaio_ken_mult.c
-Allowed functions: write
---------------------------------------------------------------------------------
-Gere a tabuada (até 9) do número passado como argumento.
-EOF
-cat << 'EOF' > "$TESTES_DIR/kaio_ken_mult/run_test.sh"
-#!/bin/bash
-"$1" "9"
-"$1" "19"
-"$1"
-EOF
-cat << 'EOF' > "$TESTES_DIR/kaio_ken_mult/expected.txt"
-1 x 9 = 9
-2 x 9 = 18
-3 x 9 = 27
-4 x 9 = 36
-5 x 9 = 45
-6 x 9 = 54
-7 x 9 = 63
-8 x 9 = 72
-9 x 9 = 81
-1 x 19 = 19
-2 x 19 = 38
-3 x 19 = 57
-4 x 19 = 76
-5 x 19 = 95
-6 x 19 = 114
-7 x 19 = 133
-8 x 19 = 152
-9 x 19 = 171
-
-EOF
-chmod +x "$TESTES_DIR/kaio_ken_mult/run_test.sh"
-
-echo ">>> Level 03 reconstruído e pronto para a compilação."
+echo ">>> Level 04 reconstruído com a Força e o Ki máximos. 13 exercícios prontos!"

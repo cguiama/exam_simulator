@@ -1,6 +1,0 @@
-Assignment name  : rostring_pet
-Expected files   : rostring_pet.c
-Allowed functions: write, malloc, free
---------------------------------------------------------------------------------
-Pegue a primeira palavra da string e mova-a para o final, separando as outras
-por exatamente um espaço.

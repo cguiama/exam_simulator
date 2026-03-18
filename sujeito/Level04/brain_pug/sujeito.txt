@@ -1,7 +1,0 @@
-Assignment name  : brain_pug
-Expected files   : brain_pug.c
-Allowed functions: write, malloc, free
---------------------------------------------------------------------------------
-Crie um interpretador Brainfuck. O array de memória (heap) tem 2048 bytes e
-inicia zerado. O ponteiro inicia no índice 0.
-Comandos: > < + - . [ ]

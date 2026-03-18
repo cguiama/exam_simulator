@@ -1,0 +1,5 @@
+Assignment name  : saiyan_prime
+Expected files   : saiyan_prime.c
+Allowed functions: printf, atoi
+--------------------------------------------------------------------------------
+Escreva um programa que receba um int positivo e exiba seus fatores primos separados por '*'.

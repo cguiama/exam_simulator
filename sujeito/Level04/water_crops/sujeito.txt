@@ -1,7 +1,0 @@
-Assignment name  : water_crops
-Expected files   : water_crops.c
-Allowed functions:
---------------------------------------------------------------------------------
-Escreva uma função que preencha recursivamente uma área delimitada em uma matriz 2D.
-typedef struct s_point { int x; int y; } t_point;
-void water_crops(char **tab, t_point size, t_point begin);

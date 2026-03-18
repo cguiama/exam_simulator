@@ -1,0 +1,6 @@
+Assignment name  : sith_checkmate
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+Receba linhas representando um tabuleiro de xadrez (Rei 'K', Peão 'P', Bispo 'B', Torre 'R', Rainha 'Q').
+Imprima "Success" se o Rei estiver em xeque, caso contrário "Fail".

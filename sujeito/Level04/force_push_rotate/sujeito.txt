@@ -1,0 +1,6 @@
+Assignment name  : force_push_rotate
+Expected files   : force_push_rotate.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+Escreva um programa que rotacione uma string empurrando a primeira palavra para o final.
+As palavras devem ser separadas por exatamente um espaço.

@@ -1,0 +1,7 @@
+Assignment name  : water_gun_fill
+Expected files   : *.c, *.h
+Allowed functions: -
+--------------------------------------------------------------------------------
+Escreva uma função que receba uma matriz 2D (char **), suas dimensões e um ponto de início.
+Ela deve preencher recursivamente a área delimitada usando o caractere 'F'.
+void flood_fill(char **tab, t_point size, t_point begin);

@@ -1,0 +1,7 @@
+Assignment name  : archive_sort_list
+Expected files   : archive_sort_list.c, list.h
+Allowed functions:
+--------------------------------------------------------------------------------
+Ordene uma lista encadeada usando a função de comparação passada por ponteiro (que retorna true/false).
+O retorno é o ponteiro para o novo head da lista.
+t_list *archive_sort_list(t_list* lst, int (*cmp)(int, int));

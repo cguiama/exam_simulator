@@ -1,0 +1,6 @@
+Assignment name  : force_foreach
+Expected files   : force_foreach.c, ft_list.h
+Allowed functions:
+--------------------------------------------------------------------------------
+Aplique a função 'f' recebida como parâmetro aos dados de todos os nós da lista.
+void force_foreach(t_list *begin_list, void (*f)(void *));

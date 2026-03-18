@@ -1,0 +1,6 @@
+Assignment name  : order66_remove
+Expected files   : order66_remove.c, ft_list.h
+Allowed functions: free
+--------------------------------------------------------------------------------
+Remova os nós da lista se a função 'cmp' retornar 0 ao comparar seus dados com 'data_ref'.
+void order66_remove(t_list **begin_list, void *data_ref, int (*cmp)());

@@ -1,7 +1,0 @@
-Assignment name  : catch_mouse
-Expected files   : *.c, *.h
-Allowed functions: write, malloc, free
---------------------------------------------------------------------------------
-Receba um tabuleiro de xadrez em strings (Matriz 2D).
-Verifique se o Rei 'K' está em perigo por um Peão 'P', Bispo 'B', Torre 'R' ou Rainha 'Q'.
-Se estiver, imprima "Success", caso contrário "Fail".
