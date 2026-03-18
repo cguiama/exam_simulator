@@ -4,5 +4,5 @@ Allowed functions: write
 --------------------------------------------------------------------------------
 Escreva um programa que recebe uma string e exibe o primeiro caractere 'a'
 que encontrar nela, seguido de uma nova linha.
-Se não houver nenhum caractere 'a' na string, exiba apenas uma nova linha (siga o exemplo).
+Se não houver nenhum caractere 'a' na string, exiba apenas 'a' seguido de uma nova linha.
 Se o número de parâmetros não for 1, o programa exibe 'a' seguido de uma nova linha.
