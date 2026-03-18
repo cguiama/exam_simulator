@@ -170,8 +170,9 @@ if [ "$LEVEL" == "00" ]; then
                 # Bloqueio caso tente avaliar sem enviar para a Vogsphere
                 if [ "$MOCK_PUSHED" = false ]; then
                     echo -e "\n${RED}[ERRO FATAL] A pasta no servidor está vazia ou desatualizada!${NC}"
-                    echo -e "Você precisa executar o fluxo antes de avaliar:"
-                    echo -e "1. git add ."
+                    echo -e "Antes de ser avaliado com grademe você precisa executar o fluxo de commits no simulador:"
+                    echo -e "\n${RED}FAÇA O FLUXO DENTRO DO SIMULADOR E NÃO EM OUTRO TERMINAL${NC}"
+					echo -e "1. git add ."
                     echo -e "2. git commit -m \"teste\""
                     echo -e "3. git push"
                     read -p ">>> Pressione [ENTER] para tentar de novo..."
