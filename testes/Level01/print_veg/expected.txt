@@ -1,13 +1,1 @@
 Cenoura e ErvilhaEOF
-
-# ==========================================
-# 4. strcpy_pet (ft_strcpy) -> Function
-# ==========================================
-cat << 'EOF' > "$SUJEITO_DIR/strcpy_pet/sujeito.txt"
-Assignment name  : strcpy_pet
-Expected files   : strcpy_pet.c
-Allowed functions:
---------------------------------------------------------------------------------
-Reproduza o comportamento da função strcpy (man strcpy).
-Sua função deve ser declarada da seguinte forma:
-char *strcpy_pet(char *s1, char *s2);
